@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile xmlns="http://www.ni.com/PlatformFramework">
+    <SourceModelFeatureSet>
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="3.0.0.49154" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="Editor" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/PlatformFramework" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="Common Language Components" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/MocCommon" Version="3.0.0.49152" />
+    </SourceModelFeatureSet>
+    <VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+        <Icon Id="356" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+            <IconPanel Height="[float]40" Id="357" Width="[float]40">
+                <IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="358" TemplateName="GrayNoText">
+                    <Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="359" IsHitTestVisible="[bool]False" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" />
+                    <Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="360" IsHitTestVisible="[bool]False" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" />
+                </IconTemplate>
+                <Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Id="361">
+                    <Text Font="[SMFont]0,6," Id="1036" Left="[float]3" Text="[string]Compute&#xD;&#xA;corr" TextWrapping="[TextWrapping]NoWrap" Top="[float]10" />
+                </Canvas>
+            </IconPanel>
+        </Icon>
+        <ConnectorPane Height="40" Id="9" ListViewHeight="105" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+            <ConnectorPaneTerminal ListViewHotspot="0 95" Parameter="17" />
+            <ConnectorPaneTerminal Hotspot="0 15" />
+            <ConnectorPaneTerminal Hotspot="0 25" ListViewHotspot="0 35" Parameter="839" />
+            <ConnectorPaneTerminal Hotspot="15 0" />
+            <ConnectorPaneTerminal Hotspot="40 5" ListViewHotspot="150 65" Parameter="1173" />
+            <ConnectorPaneTerminal Hotspot="40 15" />
+            <ConnectorPaneTerminal Hotspot="40 25" />
+            <ConnectorPaneTerminal Hotspot="15 40" />
+            <ConnectorPaneTerminal Hotspot="0 35" ListViewHotspot="0 80" Parameter="1094" />
+            <ConnectorPaneTerminal Hotspot="25 0" />
+            <ConnectorPaneTerminal Hotspot="40 35" ListViewHotspot="150 50" Parameter="898" />
+            <ConnectorPaneTerminal Hotspot="25 40" />
+        </ConnectorPane>
+        <MethodDocumentation xmlns="http://www.ni.com/PlatformFramework" />
+        <DiagramUnplacedItems Id="10" />
+        <FrontPanelUnplacedItems Id="11">
+            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="840" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Name="[string]Equalizer length" Value="{DataItemBinding Id=839}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <ArrayViewer ArrayElement="[UIModel]901" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Id="904" IsFixedSize="[bool]False" Name="[string]Channel cross correlation" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Value="{DataItemBinding Id=898}" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="901" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Name="[string]Child" ValueFormatter="[string]LV:G6" ValueType="[Type]ComplexDouble" Width="[float]70" />
+            </ArrayViewer>
+            <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=909}" Height="[float]400" Id="910" Label="[UIModel]918" Left="[float]304" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]643" Width="[float]600" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="911" Label="[string]Time" MajorDivisions="[UIModel]914" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 60, System.Double" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="914" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
+                </Axis>
+                <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="912" Label="[string]Amplitude" Orientation="[SMOrientation]Vertical" Range="[IRange]-0.1, 1.1, System.Double" ValueType="[Type]Double" />
+                <Plot HorizontalScale="[UIModel]911" Id="913" Label="[string]Plot" VerticalScale="[UIModel]912" />
+            </Graph>
+            <PlotLegend Graph="[UIModel]910" Height="[float]28" Id="915" Left="[float]911" Top="[float]643" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]910" Height="[float]102" Id="916" Left="[float]309" Top="[float]1072" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]910" Id="917" Left="[float]309" Top="[float]1050" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="918" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]910" Left="[float]304" Locked="[bool]True" Text="[string]Graph" Top="[float]620" />
+            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="1096" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]1097" Left="[float]82" Top="[float]158" Value="{DataItemBinding Id=1094}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="1097" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]1096" Left="[float]82" Locked="[bool]True" Text="[string]equalizer delay" Top="[float]135" />
+            <ArrayViewer ArrayElement="[UIModel]1176" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Id="1179" Name="[string]Formated channel" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Value="{DataItemBinding Id=1173}" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="1176" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Name="[string]Child" ValueFormatter="[string]LV:G6" ValueType="[Type]ComplexDouble" Width="[float]70" />
+            </ArrayViewer>
+        </FrontPanelUnplacedItems>
+        <BlockDiagram Id="12">
+            <DataAccessor Bounds="1355 1920 40 15" DataItem="17" Id="18" Label="278">
+                <Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="18" Bounds="1260 1920 90 16" Id="278" Text="channel estimate" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="1140 1880 40 15" DataItem="839" Id="837" Label="838">
+                <Terminal DataType="Int32" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="837" Bounds="1050 1880 85 16" Id="838" Text="Equalizer length" xmlns="http://www.ni.com/PlatformFramework" />
+            <WireComment AttachedTo="1062" Bounds="1335 1877 28.8 16" Id="863" xmlns="http://www.ni.com/PlatformFramework">
+                <p.ExpandedWidth>28.8</p.ExpandedWidth>
+                <p.Point>1349.4 1885</p.Point>
+                <p.Text>L</p.Text>
+            </WireComment>
+            <DataAccessor Bounds="1805 1915 40 15" DataItem="898" Id="903" Label="905">
+                <Terminal DataType="ComplexDouble[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="903" Bounds="1850 1915 134 16" Id="905" Text="Channel cross correlation" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="1870 2000 40 15" DataItem="909" Id="907" Label="908">
+                <Terminal DataType="Double[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="907" Bounds="1915 2000 44 16" Id="908" Text="Graph_2" xmlns="http://www.ni.com/PlatformFramework" />
+            <ArraySubset Bounds="1570 1985 40 40" Id="920" Terminals="array=924, subarray=1060, index0=927, length0=1062" />
+            <Wire Id="924" Joints="N(1030:R0) h(20) v(65) N(920:array)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="927" Joints="N(934:x-1) N(920:index0)" xmlns="http://www.ni.com/PlatformFramework" />
+            <ArraySize Bounds="1465 1995 40 20" Id="931" />
+            <Wire Id="933" Joints="N(931:size(s\)) N(934:x)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Decrement Bounds="1520 1995 30 30" Id="934" />
+            <Wire Id="959" Joints="N(18:Value) h(45) B(1) N(1030:L0) B(1) v(75) B(3) N(931:array) B(3) v(200) N(1076:array)" xmlns="http://www.ni.com/PlatformFramework" />
+            <OneDAutoCorrelationCDB Bounds="1455 1920 50 50" Id="1030" Target="\1D\ Auto\ Correlation\ \(CDB\)\.gvi">
+                <p.MethodDeclaration>
+                    <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                        <Parameter Id="L0" Desc="x" />
+                        <Parameter Id="L1" Desc="normalization" />
+                        <Parameter Id="R0" Desc="rxx" />
+                        <Parameter Id="R4" Desc="error" />
+                    </MethodDeclaration>
+                </p.MethodDeclaration>
+                <Terminal DataType="ComplexDouble[]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="@-1076428758_0" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="50 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Int32" Direction="Output" Hotspot="50 45" Id="R4" xmlns="http://www.ni.com/PlatformFramework" />
+            </OneDAutoCorrelationCDB>
+            <ComplexToRealImaginary Bounds="1800 2000 30 30" Id="1031" />
+            <Wire Id="1035" Joints="N(1031:x) N(907:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <ReplaceArraySubset Bounds="1680 1955 40 40" Id="1046" Terminals="inArray=1052, outArray=1061, c0t0v=1055, c0t1v=1060" />
+            <InitializeArray Bounds="1600 1860 40 30" Id="1047" Terminals="element=1050, outArray=1052, c0t0v=1062" />
+            <Literal Bounds="1495 1860 56.8 16" DataType="ComplexDouble" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="1048" Label="1049" xmlns="http://www.ni.com/MocCommon">
+                <p.Data>0x0;0x0</p.Data>
+                <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+            </Literal>
+            <TextNode AttachedTo="1048" Bounds="1495 1860 0 0" Id="1049" Text="element" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="1050" Joints="N(1048:Out) N(1047:element)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="1052" Joints="N(1047:outArray) h(35) v(95) N(1046:inArray)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Literal Bounds="1630 1975 39.2 16" DataType="Int32" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="1053" Label="1054" xmlns="http://www.ni.com/MocCommon">
+                <p.Data>0</p.Data>
+                <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+            </Literal>
+            <TextNode AttachedTo="1053" Bounds="1630 1975 0 0" Id="1054" Text="index" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="1055" Joints="N(1053:Out) N(1046:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="1060" Joints="N(920:subarray) N(1046:c0t1v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="1061" Joints="N(1046:outArray) h(70) B(1) v(-40) N(903:Value) B(1) v(55) N(1031:x + iy)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="1062" Joints="N(837:Value) h(50) B(1) N(1047:c0t0v) B(1) v(135) B(3) N(920:length0) B(3) v(150) h(445) B(6) N(1082:c0t0v) B(6) v(125) N(1088:x)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Comment Bounds="1160 1780 804.8 28.8" Id="1069" xmlns="http://www.ni.com/MocCommon">
+                <p.Text>Compute the autocorrelation of the channel h. Once the correlation have been computed, one has to make sure the output vector is of size L.</p.Text>
+            </Comment>
+            <Wire Id="1072" Joints="N(1081:outArray) N(1178:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="1455 2305 40 15" DataItem="1094" Id="1073" Label="1090">
+                <Terminal DataType="Int32" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <ArraySubset Bounds="1615 2195 40 40" Id="1076" Terminals="array=959, subarray=1206, index0=1078, length0=1080" />
+            <Literal Bounds="1540 2215 39.1999969 16" DataType="Int32" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="1077" Label="1092" xmlns="http://www.ni.com/MocCommon">
+                <p.Data>0</p.Data>
+                <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+            </Literal>
+            <Wire Id="1078" Joints="N(1077:Out) N(1076:index0)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Increment Bounds="1550 2295 30 30" Id="1079" />
+            <Wire Id="1080" Joints="N(1079:x+1) h(30) B(1) N(1088:y) B(1) v(-80) N(1076:length0)" xmlns="http://www.ni.com/PlatformFramework" />
+            <ReplaceArraySubset Bounds="2305 2220 40 40" Id="1081" Terminals="inArray=1085, outArray=1072, c0t0v=1194, c0t1v=1200" />
+            <InitializeArray Bounds="1685 2145 40 30" Id="1082" Terminals="element=1084, outArray=1085, c0t0v=1062" />
+            <Literal Bounds="1612.4 2145 56.8000031 16" DataType="ComplexDouble" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="1083" Label="1093" xmlns="http://www.ni.com/MocCommon">
+                <p.Data>0x0;0x0</p.Data>
+                <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+            </Literal>
+            <Wire Id="1084" Joints="N(1083:Out) N(1082:element)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="1085" Joints="N(1082:outArray) h(30) v(75) N(1081:inArray)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Subtract Bounds="1710 2290 30 30" Id="1088" />
+            <Wire Id="1089" Joints="N(1073:Value) N(1079:x)" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="1073" Bounds="1370 2305 80 16" Id="1090" Text="equalizer delay" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="1077" Bounds="1540 2215 0 0" Id="1092" Text="index" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="1083" Bounds="1612.4 2145 0 0" Id="1093" Text="element" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="2410 2220 40 15" DataItem="1173" Id="1178" Label="1180">
+                <Terminal DataType="ComplexDouble[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="1178" Bounds="2455 2220 96 16" Id="1180" Text="Formated channel" xmlns="http://www.ni.com/PlatformFramework" />
+            <Comment Bounds="1555 2105 230.4 28.8" Id="1181" xmlns="http://www.ni.com/MocCommon">
+                <p.Text>Compute the vector h[-K_2] .... h[K1]</p.Text>
+            </Comment>
+            <CaseStructure Bounds="1845 2325 415 235" Default="1183" Id="1182" Selected="1184" UserSelectorBounds="166.4 0 82.4 16.8">
+                <CaseStructure.Case Bounds="5 5 405 225" Id="1183" Pattern="False">
+                    <Wire Id="1190" Joints="N(1191:1183) N(1189:1183)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="1202" Joints="N(1203:1183) N(1201:1183)" xmlns="http://www.ni.com/PlatformFramework" />
+                </CaseStructure.Case>
+                <CaseStructure.Case Bounds="5 5 405 225" Id="1184" Pattern="True">
+                    <ArraySubset Bounds="190 55 40 40" Id="1195" Terminals="array=1196, subarray=1207, index0=1212, length0" />
+                    <Wire Id="1196" Joints="N(1203:1184) N(1195:array)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="1207" Joints="N(1195:subarray) N(1201:1184)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Literal Bounds="350 10 39.2 16" DataType="Int32" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="1208" xmlns="http://www.ni.com/MocCommon">
+                        <p.Data>0</p.Data>
+                        <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+                    </Literal>
+                    <Wire Id="1209" Joints="N(1208:Out) N(1189:1184)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <AbsoluteValue Bounds="110 65 30 30" Id="1210" />
+                    <Wire Id="1211" Joints="N(1191:1184) h(5) v(65) N(1210:x)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="1212" Joints="N(1210:abs(x\)) N(1195:index0)" xmlns="http://www.ni.com/PlatformFramework" />
+                </CaseStructure.Case>
+                <CaseStructure.Selector Bounds="-4 40 13 15" Docking="Left" Id="1185" Terminals="1182=1188, 1183, 1184" />
+                <CaseStructure.Tunnel Bounds="406 15 13 10" Docking="Right" Id="1189" Terminals="1182=1194, 1183=1190, 1184=1209" />
+                <CaseStructure.Tunnel Bounds="-4 15 13 10" Docking="Left" Id="1191" Terminals="1182=1193, 1183=1190, 1184=1211" />
+                <CaseStructure.Tunnel Bounds="406 60 13 10" Docking="Right" Id="1201" Terminals="1182=1200, 1183=1202, 1184=1207" />
+                <CaseStructure.Tunnel Bounds="-4 60 13 10" Docking="Left" Id="1203" Terminals="1182=1206, 1183=1202, 1184=1196" />
+            </CaseStructure>
+            <IsLessThan0 Bounds="1785 2355 30 30" Id="1186" />
+            <Wire Id="1188" Joints="N(1186:x &lt; 0?) N(1185:1182)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="1193" Joints="N(1088:x-y) h(15) v(40) B(2) N(1191:1182) B(2) v(25) N(1186:x)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="1194" Joints="N(1189:1182) h(31) v(-100) N(1081:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="1200" Joints="N(1201:1182) h(36) v(-135) N(1081:c0t1v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="1206" Joints="N(1076:subarray) h(5) v(55) h(176) v(135) N(1203:1182)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Comment Bounds="1870 2270 340.8 28.8" Id="1213" xmlns="http://www.ni.com/MocCommon">
+                <p.Text>In some cases, only part of the channel needs to be taken</p.Text>
+            </Comment>
+        </BlockDiagram>
+        <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000">
+            <ArrayViewer ArrayElement="[UIModel]16" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]37" Id="19" Label="[UIModel]223" Left="[float]82" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]98" Value="{DataItemBinding Id=17}" Width="[float]129" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="16" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Left="[float]53" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexDouble]0 + 0i" ValueType="[Type]ComplexDouble" Width="[float]69" />
+            </ArrayViewer>
+            <Label Id="223" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]19" Left="[float]82" Locked="[bool]True" Text="[string]channel estimate" Top="[float]75" />
+        </CPFrontPanel>
+        <DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="1" DataType="ComplexDouble[]" Id="17" Name="channel estimate" />
+        <DataItem CallDirection="Input" CallIndex="2" DataType="Int32" Id="839" Name="Equalizer length">
+            <p.DefaultValue>0</p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="3" DataType="ComplexDouble[]" Id="898" Name="Channel cross correlation">
+            <p.DefaultValue>
+                <Array Lengths="0" />
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" DataType="Double[]" Id="909" Name="Graph_2">
+            <p.DefaultValue>
+                <Array Lengths="0" />
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="0" DataType="Int32" Id="1094" Name="equalizer delay">
+            <p.DefaultValue>0</p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="0" DataType="ComplexDouble[]" Id="1173" Name="Formated channel" />
+        <DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+            <p.TypeReference TypeId="-1076428758_0">
+                <Enumeration Name="">
+                    <Members>
+                        <EnumerationMember Value="0" Name="none" />
+                        <EnumerationMember Value="1" Name="unbiased" />
+                        <EnumerationMember Value="2" Name="biased" />
+                    </Members>
+                    <DataType>
+                        <UInt32 />
+                    </DataType>
+                </Enumeration>
+            </p.TypeReference>
+        </DataTypeReferenceTable>
+    </VirtualInstrument>
+</SourceFile>
