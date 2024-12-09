@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile xmlns="http://www.ni.com/PlatformFramework">
+    <SourceModelFeatureSet>
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="3.0.0.49154" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="Editor" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/PlatformFramework" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="3.0.0.49152" />
+    </SourceModelFeatureSet>
+    <VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+        <Icon Id="2" ListViewIconCrop="0 0 50 50" xmlns="http://www.ni.com/PlatformFramework">
+            <IconPanel Height="[float]50" Id="3" Width="[float]50">
+                <IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="4" TemplateName="Gray">
+                    <Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" />
+                    <Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" />
+                    <FileNameText FileNameText="[bool]True" Font="[SMFont]0,6," HorizontalAlignment="[HorizontalAlignment]Left" Id="7" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]BER vs SNR(af2a39f1-f519-4fce-9323-b03bbacbd343)" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" VerticalAlignment="[VerticalAlignment]Top" />
+                </IconTemplate>
+                <Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Id="8" Margin="[SMThickness]3,3,3,3" />
+            </IconPanel>
+        </Icon>
+        <ConnectorPane Height="50" Id="9" ListViewHeight="30" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+            <ConnectorPaneTerminal />
+            <ConnectorPaneTerminal Hotspot="0 15" />
+            <ConnectorPaneTerminal Hotspot="0 25" />
+            <ConnectorPaneTerminal Hotspot="0 35" />
+            <ConnectorPaneTerminal Hotspot="0 45" />
+            <ConnectorPaneTerminal Hotspot="15 0" />
+            <ConnectorPaneTerminal Hotspot="25 0" />
+            <ConnectorPaneTerminal Hotspot="35 0" />
+            <ConnectorPaneTerminal Hotspot="50 5" />
+            <ConnectorPaneTerminal Hotspot="50 15" />
+            <ConnectorPaneTerminal Hotspot="50 25" />
+            <ConnectorPaneTerminal Hotspot="50 35" />
+            <ConnectorPaneTerminal Hotspot="50 45" />
+            <ConnectorPaneTerminal Hotspot="15 50" />
+            <ConnectorPaneTerminal Hotspot="25 50" />
+            <ConnectorPaneTerminal Hotspot="35 50" />
+        </ConnectorPane>
+        <MethodDocumentation xmlns="http://www.ni.com/PlatformFramework" />
+        <DiagramUnplacedItems Id="10">
+            <DataAccessor Bounds="1930 295 40 15" DataItem="9664" Id="9665" Label="9666">
+                <Terminal DataType="@-827244755_0" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="9665" Bounds="1975 295 61 16" Id="9666" Text="BER vs SNR" xmlns="http://www.ni.com/PlatformFramework" />
+        </DiagramUnplacedItems>
+        <FrontPanelUnplacedItems Id="11" />
+        <BlockDiagram Id="12" />
+        <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000">
+            <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=9664}" Height="[float]400" Id="9652" Label="[UIModel]9663" Left="[float]1122" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]681" Width="[float]600" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="9653" Label="[string]SNR [dB]" MajorDivisions="[UIModel]9656" MajorGridLines="[UIModel]9657" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 10, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="9656" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
+                    <GridLines Id="9657" />
+                </Axis>
+                <Axis Adjuster="[RangeAdjuster]None" Id="9654" Label="[string]Average BER" Location="[RelativeLocation]Near" MajorDivisions="[UIModel]9658" MajorGridLines="[UIModel]9659" Orientation="[SMOrientation]Vertical" Range="[IRange]1E-06, 1, System.Double" ScaleKind="[RangeScaleKind]LogarithmBase10" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="9658" />
+                    <GridLines Id="9659" />
+                </Axis>
+                <Plot HorizontalScale="[UIModel]9653" Id="9655" Label="[string]Plot" VerticalScale="[UIModel]9654" />
+            </Graph>
+            <PlotLegend Graph="[UIModel]9652" Height="[float]28" Id="9660" Left="[float]1729" Top="[float]681" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]9652" Height="[float]102" Id="9661" Left="[float]1127" Top="[float]1110" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]9652" Id="9662" Left="[float]1127" Top="[float]1088" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="9663" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]9652" Left="[float]1122" Locked="[bool]True" Text="[string]BER vs SNR" Top="[float]658" />
+        </CPFrontPanel>
+        <DataItem DataType="@-827244755_0" Id="9648" Name="Data">
+            <p.DefaultValue>
+                <Cluster>
+                    <Field1>
+                        <Array Lengths="21">
+                            <Elements>0x4024000000000000,0x4023000000000000,0x4022000000000000,0x4021000000000000,0x4020000000000000,0x401E000000000000,0x401C000000000000,0x401A000000000000,0x4018000000000000,0x4016000000000000,0x4014000000000000,0x4012000000000000,0x4010000000000000,0x400C000000000000,0x4008000000000000,0x4004000000000000,0x4000000000000000,0x3FF8000000000000,0x3FF0000000000000,0x3FE0000000000000,0x0</Elements>
+                        </Array>
+                    </Field1>
+                    <Field2>
+                        <Array Lengths="21">
+                            <Elements>0x3F67C1BDA5119CE5,0x3F724F227D028A21,0x3F7ABF338716095C,0x3F84801F75104D58,0x3F8B13165D3996F6,0x3F92085B18548A98,0x3F97D6B65A9A8046,0x3F9C8C9320D99456,0x3FA2085B18548A9A,0x3FA6555C52E72DA1,0x3FAABB44E50C5EB1,0x3FAFC7A398201CD8,0x3FB2209AAA3AD18C,0x3FB4FBFC6540CC7A,0x3FB7DDEBD9018E76,0x3FBA858793DD97FC,0x3FBD8C2A454DE7EF,0x3FC07357E670E2C3,0x3FC20D4562E09FE8,0x3FC3ADC0980B241E,0x3FC53C89F40A2877</Elements>
+                        </Array>
+                    </Field2>
+                </Cluster>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="String" Id="9649" Name="DisplayName">
+            <p.DefaultValue>BER vs SNR Wiener</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="String" Id="9650" Name="Source">
+            <p.DefaultValue>simulator_SNR_loop_equalisers.gvi</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="Timestamp" Id="9651" Name="Timestamp">
+            <p.DefaultValue>63866576191;3101342245322752026;Utc</p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" DataType="@-827244755_0" Id="9664" Name="ControlSettings">
+            <p.DefaultValue>
+                <Cluster>
+                    <Field1>null</Field1>
+                    <Field2>null</Field2>
+                </Cluster>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="String" Id="9667" Name="ControlName">
+            <p.DefaultValue>BER vs SNR</p.DefaultValue>
+        </DataItem>
+        <DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+            <p.TypeReference TypeId="-827244755_0">
+                <Class Id="1" Name="" Cluster="">
+                    <ClosedGenericParameters />
+                    <GenericTypeDefinition>
+                        <Void />
+                    </GenericTypeDefinition>
+                    <BaseType>
+                        <Void />
+                    </BaseType>
+                    <Interfaces />
+                    <Members>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Element 1">
+                            <DataType>
+                                <VariableArray>
+                                    <DereferenceType>
+                                        <Double />
+                                    </DereferenceType>
+                                </VariableArray>
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Element 2">
+                            <DataType>
+                                <VariableArray>
+                                    <DereferenceType>
+                                        <Double />
+                                    </DereferenceType>
+                                </VariableArray>
+                            </DataType>
+                        </Field>
+                    </Members>
+                </Class>
+            </p.TypeReference>
+        </DataTypeReferenceTable>
+    </VirtualInstrument>
+</SourceFile>

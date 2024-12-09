@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile xmlns="http://www.ni.com/PlatformFramework">
+    <SourceModelFeatureSet>
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="3.0.0.49154" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="Editor" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/PlatformFramework" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="3.0.0.49152" />
+    </SourceModelFeatureSet>
+    <VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+        <Icon Id="2" ListViewIconCrop="0 0 50 50" xmlns="http://www.ni.com/PlatformFramework">
+            <IconPanel Height="[float]50" Id="3" Width="[float]50">
+                <IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="4" TemplateName="Gray">
+                    <Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" />
+                    <Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" />
+                    <FileNameText FileNameText="[bool]True" Font="[SMFont]0,6," HorizontalAlignment="[HorizontalAlignment]Left" Id="7" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Received Constellation(e0286cc1-9a3c-46f3-8804-cdcec94a868d)" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" VerticalAlignment="[VerticalAlignment]Top" />
+                </IconTemplate>
+                <Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Id="8" Margin="[SMThickness]3,3,3,3" />
+            </IconPanel>
+        </Icon>
+        <ConnectorPane Height="50" Id="9" ListViewHeight="30" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+            <ConnectorPaneTerminal />
+            <ConnectorPaneTerminal Hotspot="0 15" />
+            <ConnectorPaneTerminal Hotspot="0 25" />
+            <ConnectorPaneTerminal Hotspot="0 35" />
+            <ConnectorPaneTerminal Hotspot="0 45" />
+            <ConnectorPaneTerminal Hotspot="15 0" />
+            <ConnectorPaneTerminal Hotspot="25 0" />
+            <ConnectorPaneTerminal Hotspot="35 0" />
+            <ConnectorPaneTerminal Hotspot="50 5" />
+            <ConnectorPaneTerminal Hotspot="50 15" />
+            <ConnectorPaneTerminal Hotspot="50 25" />
+            <ConnectorPaneTerminal Hotspot="50 35" />
+            <ConnectorPaneTerminal Hotspot="50 45" />
+            <ConnectorPaneTerminal Hotspot="15 50" />
+            <ConnectorPaneTerminal Hotspot="25 50" />
+            <ConnectorPaneTerminal Hotspot="35 50" />
+        </ConnectorPane>
+        <MethodDocumentation xmlns="http://www.ni.com/PlatformFramework" />
+        <DiagramUnplacedItems Id="10">
+            <DataAccessor Bounds="1740 145 40 15" DataItem="5045" Id="5046" Label="5047">
+                <Terminal DataType="@125217053_0" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="5046" Bounds="1785 145 120 16" Id="5047" Text="Received Constellation" xmlns="http://www.ni.com/PlatformFramework" />
+        </DiagramUnplacedItems>
+        <FrontPanelUnplacedItems Id="11" />
+        <BlockDiagram Id="12" />
+        <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000">
+            <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=5045}" Height="[float]400" Id="4929" Label="[UIModel]5044" Left="[float]102" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]675" Width="[float]496" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <PlotRenderer Id="4930" PointFill="[SMSolidColorBrush]#ff7b161a" PointShape="[PointShape]Ellipse" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="4931" PointFill="[SMSolidColorBrush]#ff205326" PointShape="[PointShape]Rectangle" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="4932" PointFill="[SMSolidColorBrush]#ffe2b683" PointShape="[PointShape]Diamond" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="4933" PointFill="[SMSolidColorBrush]#ffb7ac1f" PointShape="[PointShape]Cross" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="4934" PointFill="[SMSolidColorBrush]#ffaedcef" PointShape="[PointShape]Ellipse" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="4935" PointFill="[SMSolidColorBrush]#ffa08bb0" PointShape="[PointShape]Rectangle" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="4936" PointFill="[SMSolidColorBrush]#ff7f7f7f" PointShape="[PointShape]Diamond" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="4937" PointFill="[SMSolidColorBrush]#ff3c0726" PointShape="[PointShape]Cross" PointSize="[SMSize]5, 5" />
+                <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="4938" Label="[string]Time" MajorDivisions="[UIModel]5040" Orientation="[SMOrientation]Horizontal" Range="[IRange]-2, 2, System.Double" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="5040" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
+                </Axis>
+                <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="4939" Label="[string]Amplitude" Orientation="[SMOrientation]Vertical" Range="[IRange]-3, 2, System.Double" ValueType="[Type]Double" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4940" Label="[string]Plot" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4941" Label="[string]Plot1" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4942" Label="[string]Plot2" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4943" Label="[string]Plot3" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4944" Label="[string]Plot4" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4945" Label="[string]Plot5" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4946" Label="[string]Plot6" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4947" Label="[string]Plot7" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4948" Label="[string]Plot8" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4949" Label="[string]Plot9" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4950" Label="[string]Plot10" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4951" Label="[string]Plot11" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4952" Label="[string]Plot12" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4953" Label="[string]Plot13" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4954" Label="[string]Plot14" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4955" Label="[string]Plot15" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4956" Label="[string]Plot16" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4957" Label="[string]Plot17" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4958" Label="[string]Plot18" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4959" Label="[string]Plot19" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4960" Label="[string]Plot20" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4961" Label="[string]Plot21" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4962" Label="[string]Plot22" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4963" Label="[string]Plot23" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4964" Label="[string]Plot24" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4965" Label="[string]Plot25" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4966" Label="[string]Plot26" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4967" Label="[string]Plot27" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4968" Label="[string]Plot28" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4969" Label="[string]Plot29" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4970" Label="[string]Plot30" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4971" Label="[string]Plot31" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4972" Label="[string]Plot32" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4973" Label="[string]Plot33" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4974" Label="[string]Plot34" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4975" Label="[string]Plot35" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4976" Label="[string]Plot36" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4977" Label="[string]Plot37" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4978" Label="[string]Plot38" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4979" Label="[string]Plot39" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4980" Label="[string]Plot40" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4981" Label="[string]Plot41" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4982" Label="[string]Plot42" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4983" Label="[string]Plot43" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4984" Label="[string]Plot44" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4985" Label="[string]Plot45" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4986" Label="[string]Plot46" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4987" Label="[string]Plot47" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4988" Label="[string]Plot48" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4989" Label="[string]Plot49" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4990" Label="[string]Plot50" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4991" Label="[string]Plot51" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4992" Label="[string]Plot52" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4993" Label="[string]Plot53" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4994" Label="[string]Plot54" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4995" Label="[string]Plot55" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4996" Label="[string]Plot56" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4997" Label="[string]Plot57" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4998" Label="[string]Plot58" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="4999" Label="[string]Plot59" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5000" Label="[string]Plot60" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5001" Label="[string]Plot61" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5002" Label="[string]Plot62" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5003" Label="[string]Plot63" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5004" Label="[string]Plot64" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5005" Label="[string]Plot65" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5006" Label="[string]Plot66" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5007" Label="[string]Plot67" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5008" Label="[string]Plot68" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5009" Label="[string]Plot69" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5010" Label="[string]Plot70" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5011" Label="[string]Plot71" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5012" Label="[string]Plot72" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5013" Label="[string]Plot73" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5014" Label="[string]Plot74" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5015" Label="[string]Plot75" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5016" Label="[string]Plot76" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5017" Label="[string]Plot77" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5018" Label="[string]Plot78" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5019" Label="[string]Plot79" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5020" Label="[string]Plot80" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5021" Label="[string]Plot81" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5022" Label="[string]Plot82" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5023" Label="[string]Plot83" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5024" Label="[string]Plot84" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5025" Label="[string]Plot85" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5026" Label="[string]Plot86" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5027" Label="[string]Plot87" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5028" Label="[string]Plot88" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5029" Label="[string]Plot89" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5030" Label="[string]Plot90" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5031" Label="[string]Plot91" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5032" Label="[string]Plot92" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5033" Label="[string]Plot93" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5034" Label="[string]Plot94" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5035" Label="[string]Plot95" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5036" Label="[string]Plot96" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5037" Label="[string]Plot97" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5038" Label="[string]Plot98" VerticalScale="[UIModel]4939" />
+                <Plot HorizontalScale="[UIModel]4938" Id="5039" Label="[string]Plot99" VerticalScale="[UIModel]4939" />
+            </Graph>
+            <PlotLegend Graph="[UIModel]4929" Height="[float]28" Id="5041" Left="[float]605" Top="[float]675" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]4929" Height="[float]102" Id="5042" Left="[float]107" Top="[float]1104" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]4929" Id="5043" Left="[float]107" Top="[float]1082" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="5044" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]4929" Left="[float]102" Locked="[bool]True" Text="[string]Received Constellation" Top="[float]652" Visible="[bool]False" />
+        </CPFrontPanel>
+        <DataItem DataType="@125217053_0" Id="4925" Name="Data">
+            <p.DefaultValue>
+                <Array Lengths="2">
+                    <Rank1>
+                        <Elem>
+                            <Cluster>
+                                <Field1>
+                                    <Array Lengths="250">
+                                        <Elements>0x3FDB01764393C424,0xBFF13D53A2C34F16,0xBFC5C3E99A6EA787,0x3FE0F160E3285992,0x3FE9DA45C222C235,0x3FDA93DBB30EBE42,0x3FF1DDEEE6C9940C,0x3FC88603479A60AA,0x3FE5D568F18150CE,0x3FE70EF21B61F94E,0xBFDF352FB2FD3573,0x3F9F81A530A7B632,0x3FC7B6AA7DA73E4B,0x3FBB6D95D6A5A67E,0x3FE763A0D6D51AD9,0xBFF3F8B22E72D9F6,0xBFE81E0422AA44C3,0x3FF1A3AF6D128323,0x3FC9E91A7E4AC74E,0xBFF6F3AA1AE90101,0x3FE6B053F4D9FCFB,0xBFE43F745FDBA5DF,0x3FE891566F85946B,0x3FEC0341D30F3557,0x3FF27714CBDFE525,0xBFD0BE52F7B89F6F,0xBFE84F954924EE6C,0x3FED0C78AF5D94EA,0xBFF01AE204202D99,0x3FED9C1F9DCD54C9,0x3FF111EA2104C92B,0xBFE2FACD56A20370,0x3FEC6A9C3EA131F8,0xBFD71FD854CCB323,0xBFDBAC7598A082D7,0xBFE7DFFDEACFFA19,0x3F95D85616FB2B24,0xBFE680242CC1090A,0xBFE6239DB61E0D6C,0xBFEC0E8C8474A553,0x3FED8FA76499356C,0xBFD64248E5DE36E5,0x3FD7A48A0704EB8A,0x3FD257846510E90C,0x3FDB5CC6514046DD,0xBFEC420E41E6FE6B,0x3FE741ACAFD3FDE4,0xBFF28BC27BC00572,0xBFD0EAB257434BB6,0x3FE870E5DABC222C,0x3FD8B3BEC790DAA0,0x3FBFE27C355030ED,0xBFEFD1874690E3C7,0xBFEF8BB5AF332A94,0xBFF2EC153110666F,0x3FEC65D29919FCFE,0xBFF12FFF69CAF78F,0x3FEAB940C4D00095,0xBFF084033496291F,0xBFF5D3846D568076,0x3FEB15730D52EB88,0x3FBEB1DD7C0742AF,0xBFDED4341EC2AEFE,0x3FEDE00F03306748,0xBFF3DEB823FE0AF3,0xBFA6150FC83B0444,0x3FEB355503958CB2,0x3FDDD2BA9B74D13D,0xBFF2297BF7B1C2E7,0xBFEA4BCB328CC4D8,0xBFE108E9E4EF5884,0xBFEFE4FEEC908E8C,0x3FDB3DD04D2B5290,0x3FF01D846BB9C784,0x3FED989F51B38DD8,0xBFCD9144C30110AA,0xBFEB91889B340D8A,0xBFEFC3F7C549E76A,0xBFF0D89B3BE70F4A,0xBFC9D8765F4CFA45,0x3FF0EC091CE706DD,0xBFD0A5A52DDB5653,0xBFF033FA0ECE8F5D,0xBFF0F1944BAFC9A0,0x3FF7C3B8A96FE178,0xBFE208990866F81F,0xBFD04034780136B4,0x3FF4D4DB5A359448,0x3FBAB179595FC86A,0x3FF0D586173E2B8E,0x3FFCDFB2F43AAC71,0xBFBC47747452809A,0xBFE66332B1F3A339,0x3FDA966C19436143,0xBFF51D80D4ED16DA,0x3FA5A7C2688F3BDB,0xBFE2A18374AD30B7,0xBFEB410586EE8FEF,0x3FEE57F1ADA6786F,0xBFF6A673274A28B2,0xBFEA88C56F7A7837,0x3FCF6DC82B50AFE6,0xBFE8A06D6153AEEF,0xBFE4217C48DFAE47,0xBFF4024EBEF711FE,0x3FE9E819B20EB8A9,0xBFE06B3980BEDCD2,0xBFCA52495C501FD9,0x3FEB61058E2DF523,0x3FD9CF48E5059479,0x3FD4D9F783EE579C,0x3FF0B31561CE17A8,0x3FF0B55142BEF9B3,0xBFE0A9F836D22A0D,0x3FEA00F0CF59E40B,0xBFEA497EA17311CB,0xBFF1E790FB7BD465,0x3FECE025D72D4C54,0xBFF243B7E2163A74,0x3FEA3FAD5F01B20A,0xBFE30D9EF9ECE622,0xBFE85FC49CE3B880,0xBFECF60ED109A970,0xBFC4158DD35F95DF,0xBFF80E79C7F1E316,0x3FEF2BB8FB22AC42,0xBFCC22000A0A08D8,0x3FEBEC576AA7BF7F,0xBFF419DAE57E4AC3,0x3FC90CBED2F2A63B,0xBFECFA17BCD30F12,0x3FBE8CC9294A51C6,0xBFE2C1AC2B0AB893,0x3FEA3864C1C48A65,0x3FE633292C2A61A7,0x3FEB18B906A6C7C5,0x3FE6248856A7AAD6,0x3FE587C4616DFE6B,0x3FF533AD23E0BD7D,0xBFD7F80851290AA4,0x3FE6EE721EE82FE3,0xBFDCD2368B910751,0x3FE1A4FCBB65A1BA,0x3FED47D51E7FBB1C,0xBFF4702E3FB21FC4,0x3FE7B974D15E599C,0xBFB467127FE9BE22,0x3FF0327201865159,0xBFDC73C3CCA8153C,0xBFF19FA6E0A0B0A5,0xBFF12E8DBAB7FBC5,0xBFF680F6A9953E69,0x3FDA409C736514DA,0x3FE245381A2E8AD7,0xBFE4877F82784DA1,0x3FD397B009D6C7EA,0xBFE556E8E61ACA2E,0xBFDF925E45BB70DC,0xBFF901917FA6EB44,0x3FE7FA2422D81DCD,0xBFE72B4F646880CD,0xBFDE11129E8A3D15,0xBFEC5EB79987ADD2,0x3FE592607532ED3A,0x3FE7D246692492F6,0x3FE67E603A459E82,0x3FDCA6CEAB6B56B8,0x3FFA31DE197A8895,0x3FD91D19403ED8E7,0xBFE57CC0C8CF6BC9,0xBFD8CD7C10773659,0xBFE6E0EFDA60F76C,0x3FEDEFAE6D4E511E,0x3FE63D1EAA02EAD6,0xBFD06A3AC12D223B,0xBFF51A1E98192516,0xBFE7A1C995DA385D,0x3FDE121CD461B635,0xBFD960AB9DF71F85,0x3FF36D6D7E433D7C,0x3FD325342F5882B4,0xBFEB417226D94D60,0x3FF3135164A3FCA0,0x3FD99E996F25F37F,0xBFEAE7A4421E4B09,0x3FD348C67B0A4081,0xBFE3A0EFB88A12FE,0xBFB8DA63AB194ECF,0x3FF25E5ECD0E0119,0xBFE96E586D9BC521,0x3FE5CED24ED1D429,0xBFE25A32CAB1B2D3,0xBFD2778F9F5F08F0,0xBFF5D1149287AE27,0x3FEA5882B34A924A,0xBFEC957BCA67AD56,0x3FC9851FA71EC418,0xBFF0094958E738CB,0x3FF1FA1105FEA2F6,0x3FD74646EA510FFB,0xBFB77FE44B5C8FFA,0xBFCB0F9B7376A5F8,0x3FB9549EC271A47E,0x3FE93823AE1F2FE2,0xBFE8176F84A35BE2,0x3FDB3AC580A1F594,0x3FE66DBCA9A4F17B,0x3FF3C6B67A1D50AF,0x3FF3188082AE5158,0xBFF0D67869F8B622,0xBFDD57FE989E0F75,0x3FF457E7F6CDAB9C,0x3FDE95E29A91ED8E,0xBFE014B60C3328F6,0xBFD90868A1C5FBB9,0xBFE4E5209D4AFC41,0x3FEEACBB8A8C2134,0x3FE1AF981730B1BC,0x3FF59488289680E6,0x3FE0979B71F9C1D9,0xBFEB892740040300,0x3FEBB66FF75A7199,0xBFE17097479D6564,0xBFE59318CADE5348,0xBFCA3D30E6D286F6,0xBFC5F425CE4AF61F,0x3FE822160DE33B3A,0xBFD2529676B71A97,0xBFE001BD0C8FED30,0x3FE094B796063DCC,0xBFDACD15F8690859,0xBFDADEA45E148B24,0x3FE2CD1958526857,0x3FBCCD764DDC256A,0xBFE3099120857817,0xBFE7D3722035918D,0x3FCCD974D6F1224A,0xBFE241C7A4578022,0x3FDB85A9A89E8EED,0x3FFB5815B6D0C7BF,0x3FE52ADBC3EA18DE,0x3FF16BE6C3C17857,0xBFF22D8CD160F42B,0x3FC1CCB22AF78926,0xBFE68977963D3A43,0x3FD5C957C40C96E9,0xBFF2128D23496B47,0xBFEDA21992FC507A,0xBFD511656F509409,0xBFAA58F886BA9DE2</Elements>
+                                    </Array>
+                                </Field1>
+                                <Field2>
+                                    <Array Lengths="250">
+                                        <Elements>0xBFD15F1DE5A04885,0xBFD4E103D8BBC76B,0xBFE3950F061E8789,0xBFE725653CA38E2D,0xBFF52A97760773E3,0x3FE025B02660DA76,0xBFF2DB39A06229E9,0x3FED896B92855CF4,0x3FEE59CA37ECAE3C,0x3FE87E74B4C724EF,0x3FD8A309072F7736,0xBFB38B1E9F02B782,0xBFE8EFDDF05A1D57,0xBFF0F1F0839ABEB5,0xBFE55332F50F898B,0xBFF3C98816BA012C,0x3FEE0683A0184550,0xBFF6902633A3A1B3,0xBFE8069F76D1C82F,0xBFF32C9975BCE4E8,0x3F80AC2BCD9B5F5F,0xBFEDA73F59B130B3,0x3FE64DB05E679ED9,0x3FDB45F7E8BCC32C,0x3FEC17F4B798F6BC,0xBFBB10F28DACFF76,0x3FF33AB6B424FA4B,0xBFE23180C0EC9D22,0xBFD8A6B37C8C0D45,0xBFFA466A8BF1C521,0x3FE772CAD556D47E,0x3FC33A4BF02C25F0,0xBFE10118123D3628,0xBFEAB8D96152EF65,0x3FFC440FEA2D81FA,0x3FEF5BB8DC9DF835,0xBFED50E410AB01B1,0x3F7ACC54CCE19256,0x3FE7D9C7F3BF66FB,0x3FC68B06C61A9C12,0x3FEF2A363D20A32C,0x3FEBCF91F4569C02,0xBFD3D4B2D8F4DB20,0x3FD551528574DDAC,0x3FEBB8C63C1D93C9,0xBFE1C9B7107FC532,0x3FCA2C6334783273,0xBFE00FCC7478E28A,0x3FD822A91E12A416,0x3FE86E70A884879F,0xBFE543E9015D8DD0,0xBFE085FA66FC62B6,0xBFF0A683F6635EB2,0x3FBDD3935428B756,0xBFEEECE0D5FCA299,0xBFFB21AA347D38E9,0x3FE3942A2B818653,0xBFEDBB299A09D5B1,0x3FF01AB72730A601,0x3FFD5AC282F3B7B4,0x3FE2187C4BEA7BBD,0xBFD9840876A64209,0xBFF72823213B323C,0xBFCC34C7C754E50B,0xBFE8A4CE8F7B00AC,0x3FDD7E2B159B2A36,0x3FC7D763422F4CF6,0xBFF2E955856B4F0F,0xBFDF7EB0248F0637,0xBFF0361263097F24,0xBFF296E3E01B92C3,0xBFC377C91877E66C,0x3FBC41E05191B569,0x3FE7A329C42DE3D1,0xBFF0142F885EED17,0xBFF6BD333FC1F3FE,0x3FE74FEA860BDB24,0xBFD1E6B986C126B7,0xBFE1D3C437CFAB25,0x3FCEDAAEB11C2E31,0x3FF5238912D60839,0x3FD75C2F2DB7F294,0xBFEFC7E172FD531F,0x3FECBEA28CFF5279,0xBFF58B7C1C3FEF47,0x3FE0A0183220BA35,0xBFF3F7863B196F63,0x3FE4E4DA0354670A,0x3FEC4BF78B44766D,0xBFBB2ECE084FD68F,0x3FF0E1CD89B01323,0x3FE4BF9F45188E58,0x3FDB085A1BD5CB44,0xBFEE0B90D5FEBCEC,0xBFD7C84AD5E78482,0xBFF04EC423B89DBF,0x3FE3331E65DCD455,0x3FF09343C8A72F79,0x3FA7D932131D91C2,0xBFE098E5B8DD7290,0x3FE2A1DADB2B19E6,0x3FE59EECE26AC188,0xBFEC8B5AAA0CB3C1,0xBFE579759174106A,0x3FEE89342110FC9A,0xBFE924FC30B0352A,0x3FC4425F889FCD1A,0xBFB813B0FD512DFE,0x3FDD408AD59765AB,0xC003BC57D19291AE,0xBFE501FB1B6CDFEB,0xBFCFCA02AB36C6D4,0xBFC8A81082490B5B,0x3FF1F230612882B1,0x3FB951A5224BAAEA,0xBFE7188741489D20,0x3FE771AAAD5E05AB,0x3FEA812627CA3956,0xBFC44FDB1C359D30,0xBFF22DBBF02A4304,0x3FBB0C779D6FFEE4,0x3FDA2AB68FE760D8,0x3FE28C642E1FDFC3,0xBFF4AB8FB1D3CBCB,0x3FC1B5064CFDB5A5,0x3FC3A3C00BF19A66,0x3FDCEE49D62C6D21,0xBFF386D61B0863A4,0x3FE70947E6709B8E,0x3FEA4FB35CC0C2B7,0x3FD68C0D2D9765B5,0x3FEE846A757C0170,0x3FF1EF0D22FAB44E,0x3FF4D7441172575F,0x3FE1748772FAC430,0x3FF76148484282B1,0xBFEB66448BE2DD33,0x3FEE633CC22E72C2,0x3FD3B31A7CEE723A,0x3FED9462F390EEBE,0x3FE61AD27ABC2707,0xBFD240B2018E5A73,0x3FD2D6037E9FC1FA,0x3FFC19B68078C185,0x3FF0828CAF14EFD1,0xBFE4B374F44B3F31,0xBFBEEE4CC1DBD623,0x3FE29D0D329F1684,0x3FF0A7C2C6315934,0x3FF17D55826E77B2,0x3FE49CF29333B1CA,0xBFF67D3A1A564359,0xBF60F9DE1D16F6C7,0x3FE656C37F3D6068,0xBFEDA789F86D41F6,0xBFDA1CB70A0F43B8,0xBFD33C8F6594C025,0xBFBCE22CF931F697,0x3FFC0109586E12F6,0xBFA9B79A24F49688,0x3FF00E2559EE64A9,0xBFF41ED1DF82467D,0x3FF610BD2BC9284E,0xBFE1FE14053354D6,0x3FEC2E9BCDE67FF2,0xBFE8C80A3B6A9DC1,0xBFEA87C6AF68345F,0x3FF04C8BAD891159,0x3FF12F95CB80424B,0x3FDE9BEF5FDC483B,0x3FF1730B699AD621,0xBFE6ECF4AD4A3C68,0x3FC200004016E662,0x3FEB4B5C56B4F0BE,0xBFE816BD5E2A38FC,0xBFE8EF3011B131AD,0xBFEDCCBA68588279,0xBFE15D121CC94D35,0x3FE118B97E860E96,0xBFEA0041D3462E38,0x3FEFAE64D85FA1BC,0x3FEFAEDA5E66D202,0xBFD4093457C6677C,0xBFE667A4A27027C2,0x3FD6A0C576241571,0xBFE11E7727FEF1D9,0xBFF0768B0F29D77D,0x3F895884CC9BDB58,0x3FF3C19B89835BB9,0x3FF42E7216C2C180,0xBFE6D57351AA1BE1,0x3FDBACE27D76DDEE,0x3FE92EBA6FFEE3E5,0x3FC341A016C63421,0xBFDF27DE46A47436,0x3FE72176C2827E72,0xBFF25FEA9EF8ADAE,0xBFC00E746F3A6BE3,0x3FC768EC51CDAD87,0x3FF22A71749512E0,0x3FE2F3E8EA623FB9,0xBFE9C2E41F927DF9,0x3FF086399207DF51,0xBFF1921518CC9282,0x3FF3730A43C3D3EF,0xBFF26C4CE3CF1826,0xBFED56E9F479694E,0xBFD16AFD2BC6443D,0xBFF6452D4FCFAF6C,0x3FE1854D33E9BFD5,0x3FAD148827E96371,0xBFEF2D435B2C5158,0xBFF2436E36418468,0xBFCCD71225E27D69,0xBFEC4BF7C0BD9659,0x3FD0548C84E0E951,0xBFD8AEE321A4BFA3,0x3FF5F9B18921B3F1,0xBFE34064AE73FF94,0xBFD917FA72B93262,0x3FE2CBC51D117584,0x3FD9665136212B2F,0xBFF6E4219514B7D2,0x3F87B24D3043849C,0x3FED948EE69D371A,0xBFBAF342B4117C7A,0x3FEFA4051284F41A,0x3FDC8590028536EA,0xBFD579191BA3EBF6,0x3FDB85415DC260DE,0xBFD2B04375EBACDA,0x3FD4386FE368688D,0x3FA132D892936464,0xBFEEF925FA3263C4,0xBFE1E54D36F43642,0xBFCBAF5153FE73E2,0xBFE5A49D7A344B81,0xBFF404DEC25B05DF,0xBFE633D328D3CB39,0x3FE5FA2002F77FB8,0x3FEE7D7A01967C1E,0xBFEE3F89B56EBCEC,0x3FBD9D632F0CEF56,0x3FE29DF7DC3A3BE9,0xBFF1ACB874356B18,0xBFE047024130C0CC,0x3FE086E536968447,0xBFDC5E98FC6914E2,0x3FDE890B15FE65B3,0xBFEC19EB6F563111</Elements>
+                                    </Array>
+                                </Field2>
+                            </Cluster>
+                        </Elem>
+                        <Elem>
+                            <Cluster>
+                                <Field1>
+                                    <Array Lengths="16">
+                                        <Elements>0x3FDB01764393C424,0xBFE81E0422AA44C3,0x3FEC6A9C3EA131F8,0xBFD0EAB257434BB6,0xBFF3DEB823FE0AF3,0x3FF0EC091CE706DD,0xBFE2A18374AD30B7,0x3FF0B55142BEF9B3,0xBFF419DAE57E4AC3,0xBFF4702E3FB21FC4,0xBFE72B4F646880CD,0xBFE7A1C995DA385D,0xBFD2778F9F5F08F0,0x3FF3188082AE5158,0xBFCA3D30E6D286F6,0x3FE52ADBC3EA18DE</Elements>
+                                    </Array>
+                                </Field1>
+                                <Field2>
+                                    <Array Lengths="16">
+                                        <Elements>0xBFD15F1DE5A04885,0x3FEE0683A0184550,0xBFE10118123D3628,0x3FD822A91E12A416,0xBFE8A4CE8F7B00AC,0x3FF5238912D60839,0x3FE3331E65DCD455,0xBFC8A81082490B5B,0x3FE70947E6709B8E,0x3FF0828CAF14EFD1,0x3FF00E2559EE64A9,0xBFEDCCBA68588279,0x3FE92EBA6FFEE3E5,0xBFF6452D4FCFAF6C,0x3FED948EE69D371A,0x3FEE7D7A01967C1E</Elements>
+                                    </Array>
+                                </Field2>
+                            </Cluster>
+                        </Elem>
+                    </Rank1>
+                </Array>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="String" Id="4926" Name="DisplayName">
+            <p.DefaultValue>Received Constellation</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="String" Id="4927" Name="Source">
+            <p.DefaultValue>simulator_alpha_loop.gvi</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="Timestamp" Id="4928" Name="Timestamp">
+            <p.DefaultValue>63869273873;5044470615163909807;Utc</p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" DataType="@125217053_0" Id="5045" Name="ControlSettings" />
+        <DataItem DataType="String" Id="5048" Name="ControlName">
+            <p.DefaultValue>Received Constellation</p.DefaultValue>
+        </DataItem>
+        <DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+            <p.TypeReference TypeId="125217053_0">
+                <VariableArray>
+                    <DereferenceType>
+                        <Class Id="1" Name="" Cluster="">
+                            <ClosedGenericParameters />
+                            <GenericTypeDefinition>
+                                <Void />
+                            </GenericTypeDefinition>
+                            <BaseType>
+                                <Void />
+                            </BaseType>
+                            <Interfaces />
+                            <Members>
+                                <Field FieldAccessPolicy="ReadWrite" Name="Element 1">
+                                    <DataType>
+                                        <VariableArray>
+                                            <DereferenceType>
+                                                <Double />
+                                            </DereferenceType>
+                                        </VariableArray>
+                                    </DataType>
+                                </Field>
+                                <Field FieldAccessPolicy="ReadWrite" Name="Element 2">
+                                    <DataType>
+                                        <VariableArray>
+                                            <DereferenceType>
+                                                <Double />
+                                            </DereferenceType>
+                                        </VariableArray>
+                                    </DataType>
+                                </Field>
+                            </Members>
+                        </Class>
+                    </DereferenceType>
+                </VariableArray>
+            </p.TypeReference>
+        </DataTypeReferenceTable>
+    </VirtualInstrument>
+</SourceFile>

@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile xmlns="http://www.ni.com/PlatformFramework">
+    <SourceModelFeatureSet>
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="3.0.0.49154" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="Editor" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/PlatformFramework" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="3.0.0.49152" />
+    </SourceModelFeatureSet>
+    <VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+        <Icon Id="2" ListViewIconCrop="0 0 50 50" xmlns="http://www.ni.com/PlatformFramework">
+            <IconPanel Height="[float]50" Id="3" Width="[float]50">
+                <IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="4" TemplateName="Gray">
+                    <Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" />
+                    <Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" />
+                    <FileNameText FileNameText="[bool]True" Font="[SMFont]0,6," HorizontalAlignment="[HorizontalAlignment]Left" Id="7" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Synchronization Options(b619ea7c-d25f-4fba-84f5-0e06b0d9b3e8)" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" VerticalAlignment="[VerticalAlignment]Top" />
+                </IconTemplate>
+                <Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Id="8" Margin="[SMThickness]3,3,3,3" />
+            </IconPanel>
+        </Icon>
+        <ConnectorPane Height="50" Id="9" ListViewHeight="30" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+            <ConnectorPaneTerminal />
+            <ConnectorPaneTerminal Hotspot="0 15" />
+            <ConnectorPaneTerminal Hotspot="0 25" />
+            <ConnectorPaneTerminal Hotspot="0 35" />
+            <ConnectorPaneTerminal Hotspot="0 45" />
+            <ConnectorPaneTerminal Hotspot="15 0" />
+            <ConnectorPaneTerminal Hotspot="25 0" />
+            <ConnectorPaneTerminal Hotspot="35 0" />
+            <ConnectorPaneTerminal Hotspot="50 5" />
+            <ConnectorPaneTerminal Hotspot="50 15" />
+            <ConnectorPaneTerminal Hotspot="50 25" />
+            <ConnectorPaneTerminal Hotspot="50 35" />
+            <ConnectorPaneTerminal Hotspot="50 45" />
+            <ConnectorPaneTerminal Hotspot="15 50" />
+            <ConnectorPaneTerminal Hotspot="25 50" />
+            <ConnectorPaneTerminal Hotspot="35 50" />
+        </ConnectorPane>
+        <MethodDocumentation xmlns="http://www.ni.com/PlatformFramework" />
+        <DiagramUnplacedItems Id="10">
+            <DataAccessor Bounds="1310 275 40 15" DataItem="13199" Id="13200" Label="13201">
+                <Terminal DataType="@332341082_0" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="13200" Bounds="1175 275 130 16" Id="13201" Text="Synchronization Options" xmlns="http://www.ni.com/PlatformFramework" />
+        </DiagramUnplacedItems>
+        <FrontPanelUnplacedItems Id="11" />
+        <BlockDiagram Id="12" />
+        <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000">
+            <Cluster AutoArrange="[AutoArrange]ArrangeVertically" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@332341082_0" Height="[float]243" Id="13174" Label="[UIModel]13198" Left="[float]358" Top="[float]203" Value="{DataItemBinding Id=13199}" Width="[float]199">
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="13175" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]13177" Left="[float]5" Top="[float]70" Value="{ClusterBinding FieldName=Fixed\ Offset}" ValueType="[Type]Int32" Width="[float]176" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <Label Id="13176" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]13178" Left="[float]5" Locked="[bool]True" Text="[string]Correct Frequency Offset" Top="[float]182" />
+                <Label Id="13177" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]13175" Left="[float]5" Locked="[bool]True" Text="[string]Fixed Offset" Top="[float]47" />
+                <Switch BaseName="[string]Switch" FalseContent="[string]Off" Font="[SMFont]0,8.25," Height="[float]28" Id="13178" IsReadOnly="[bool]False" Label="[UIModel]13176" Left="[float]5" Orientation="[SMOrientation]Horizontal" Shape="[SwitchShape]Slider" Top="[float]205" TrueContent="[string]On" Value="{ClusterBinding FieldName=Correct\ Frequency\ Offset}" Width="[float]95" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <ComboboxSelector AllowDifferentText="[bool]False" AllowUndefinedValueEntry="[bool]True" BaseName="[string]Combo Box" Height="[float]22" Id="13179" InteractionMode="[SelectorInteractionModes]ArrowKeys, Keyboard, MouseClick, ScrollWheel, ButtonClicks" IsTypeAheadEnabled="[bool]True" Label="[UIModel]13180" Left="[float]5" Top="[float]25" Value="{ClusterBinding FieldName=Synchronization\ Method}" ValueType="[Type]String" VisualMode="[SelectorVisualMode]ComboBoxStyle" Width="[float]176" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                    <ComboboxSelectorInfo DisplayValue="[string]OFDM Synchronization" Id="13185" IsEnabled="[bool]True" Value="[string]OFDM Synchronization" ValueType="[Type]String" />
+                    <ComboboxSelectorInfo DisplayValue="[string]Timing Estimation" Id="13186" IsEnabled="[bool]True" Value="[string]Timing Estimation" ValueType="[Type]String" />
+                    <ComboboxSelectorInfo DisplayValue="[string]Joint Timing and Channel Estimation" Id="13187" IsEnabled="[bool]True" Value="[string]Joint Timing and Channel Estimation" ValueType="[Type]String" />
+                    <ComboboxSelectorInfo DisplayValue="[string]Fixed Offset" Id="13188" IsEnabled="[bool]True" Value="[string]Fixed Offset" ValueType="[Type]String" />
+                </ComboboxSelector>
+                <Label Id="13180" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]13179" Left="[float]5" Locked="[bool]True" Text="[string]Synchronization Method" Top="[float]2" Visible="[bool]True" />
+                <ComboboxSelector AllowDifferentText="[bool]False" AllowUndefinedValueEntry="[bool]True" BaseName="[string]Combo Box" Height="[float]22" Id="13181" InteractionMode="[SelectorInteractionModes]ArrowKeys, Keyboard, MouseClick, ScrollWheel, ButtonClicks" IsTypeAheadEnabled="[bool]True" Label="[UIModel]13182" Left="[float]5" Top="[float]115" Value="{ClusterBinding FieldName=Symbol\ Timing\ Recovery\ Method}" ValueType="[Type]String" VisualMode="[SelectorVisualMode]ComboBoxStyle" Width="[float]176" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                    <ComboboxSelectorInfo DisplayValue="[string]MT Align to Ideal Symbols" Id="13189" IsEnabled="[bool]True" Value="[string]MT Align to Ideal Symbols" ValueType="[Type]String" />
+                    <ComboboxSelectorInfo DisplayValue="[string]Max Energy" Id="13190" IsEnabled="[bool]True" Value="[string]Max Energy" ValueType="[Type]String" />
+                    <ComboboxSelectorInfo DisplayValue="[string]Early-Late Gate" Id="13191" IsEnabled="[bool]True" Value="[string]Early-Late Gate" ValueType="[Type]String" />
+                    <ComboboxSelectorInfo DisplayValue="[string]Gardner" Id="13192" IsEnabled="[bool]True" Value="[string]Gardner" ValueType="[Type]String" />
+                    <ComboboxSelectorInfo DisplayValue="[string]Fixed Offset" Id="13193" IsEnabled="[bool]True" Value="[string]Fixed Offset" ValueType="[Type]String" />
+                </ComboboxSelector>
+                <Label Id="13182" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]13181" Left="[float]5" Locked="[bool]True" Text="[string]Symbol Timing Recovery Method" Top="[float]92" Visible="[bool]True" />
+                <ComboboxSelector AllowDifferentText="[bool]False" AllowUndefinedValueEntry="[bool]True" BaseName="[string]Combo Box" Height="[float]22" Id="13183" InteractionMode="[SelectorInteractionModes]ArrowKeys, Keyboard, MouseClick, ScrollWheel, ButtonClicks" IsTypeAheadEnabled="[bool]True" Label="[UIModel]13184" Left="[float]5" Top="[float]160" Value="{ClusterBinding FieldName=Frame\ Detection\ Method}" ValueType="[Type]String" VisualMode="[SelectorVisualMode]ComboBoxStyle" Width="[float]176" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                    <ComboboxSelectorInfo DisplayValue="[string]Sliding Correlator" Id="13194" IsEnabled="[bool]True" Value="[string]Sliding Correlator" ValueType="[Type]String" />
+                    <ComboboxSelectorInfo DisplayValue="[string]Self Reference w/ Power Normalization" Id="13195" IsEnabled="[bool]True" Value="[string]Self Reference w/ Power Normalization" ValueType="[Type]String" />
+                    <ComboboxSelectorInfo DisplayValue="[string]Windowing" Id="13196" IsEnabled="[bool]True" Value="[string]Windowing" ValueType="[Type]String" />
+                    <ComboboxSelectorInfo DisplayValue="[string]OFDM Frame &amp; Frequency Sync" Id="13197" IsEnabled="[bool]True" Value="[string]OFDM Frame &amp; Frequency Sync" ValueType="[Type]String" />
+                </ComboboxSelector>
+                <Label Id="13184" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]13183" Left="[float]5" Locked="[bool]True" Text="[string]Frame Detection Method" Top="[float]137" Visible="[bool]True" />
+            </Cluster>
+            <Label Id="13198" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]13174" Left="[float]358" Locked="[bool]True" Text="[string]Synchronization Options" Top="[float]180" />
+        </CPFrontPanel>
+        <DataItem DataType="@332341082_0" Id="13170" Name="Data">
+            <p.DefaultValue>
+                <Cluster>
+                    <Field1>Timing Estimation</Field1>
+                    <Field2>0</Field2>
+                    <Field3>Max Energy</Field3>
+                    <Field4>Self Reference w/ Power Normalization</Field4>
+                    <Field5>False</Field5>
+                </Cluster>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="String" Id="13171" Name="DisplayName">
+            <p.DefaultValue>Synchronization Options</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="String" Id="13172" Name="Source">
+            <p.DefaultValue>OFDM_simulator_frequency_loop.gvi</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="Timestamp" Id="13173" Name="Timestamp">
+            <p.DefaultValue>63869349662;18023846931796538032;Utc</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="@332341082_0" Id="13199" Name="ControlSettings">
+            <p.DefaultValue>
+                <Cluster>
+                    <Field1>""</Field1>
+                    <Field2>0</Field2>
+                    <Field3>""</Field3>
+                    <Field4>""</Field4>
+                    <Field5>False</Field5>
+                </Cluster>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="String" Id="13202" Name="ControlName">
+            <p.DefaultValue>Synchronization Options</p.DefaultValue>
+        </DataItem>
+        <DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+            <p.TypeReference TypeId="332341082_0">
+                <Class Id="1" Name="" Cluster="">
+                    <ClosedGenericParameters />
+                    <GenericTypeDefinition>
+                        <Void />
+                    </GenericTypeDefinition>
+                    <BaseType>
+                        <Void />
+                    </BaseType>
+                    <Interfaces />
+                    <Members>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Synchronization Method">
+                            <DataType>
+                                <String />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Fixed Offset">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Symbol Timing Recovery Method">
+                            <DataType>
+                                <String />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Frame Detection Method">
+                            <DataType>
+                                <String />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Correct Frequency Offset">
+                            <DataType>
+                                <Boolean />
+                            </DataType>
+                        </Field>
+                    </Members>
+                </Class>
+            </p.TypeReference>
+        </DataTypeReferenceTable>
+    </VirtualInstrument>
+</SourceFile>

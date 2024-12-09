@@ -1,101 +1,130 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Oct  1 19:10:43 2024
+Created on Thu Oct 31 19:10:43 2024
 
 @author: carbonnelleg
 """
 
 import xml.etree.ElementTree as ET
-import pandas as pd
-import struct
-import numpy as np
 from datetime import datetime, timedelta
-import datatypes
-
-# Define namespaces
-ns = {
-    'lv': 'http://www.ni.com/LabVIEW.VI',
-    'pf': 'http://www.ni.com/PlatformFramework',
-    'ctrl': 'http://www.ni.com/Controls.LabVIEW.Design'
-}
+from .datatypes import (ns, get_tag,
+                        DataType, Int32, String, Double, ComplexDouble, Boolean,
+                        Error, Enumeration, IntArray, DoubleArray, ComplexDoubleArray,
+                        WfmDouble, TypeTable, RefTable, Array, Cluster)
+import os
 
 
-def getroot(filepath: str) -> ET.Element:
+def get_filenames(filenames_approx: list[str], dir_name: str) -> dict[str, str]:
+    """
+    Retrieves the exact filenames in a directory based on approximate names.
+
+    Parameters
+    ----------
+    filenames_approx : list[str]
+        List of approximate filenames (well-defined parts of filenames).
+    dir_name : str
+        The path to the directory containing the files.
+
+    Returns
+    -------
+    list[str]
+        List of exact filenames matching the approximate names.
+    """
+    exact_filenames = {}
+    all_files = os.listdir(dir_name)  # List all files in the directory
+
+    for approx in filenames_approx:
+        for file in all_files:
+            if approx in file:  # Check if the approximate part matches the current file
+                exact_filenames[approx] = file
+                break  # Stop searching for this approximate name once a match is found
+
+    return exact_filenames
+
+
+def get_root(filepath: str) -> ET.Element:
     # Load the XML file
     tree = ET.parse(filepath)
-    root = tree.getroot()
-    return root
+    return tree.getroot()
 
 
-root = getroot(
-    '../Labos/Lab 1 - Symbol Timing/Data/2024-09-19 134619 420/Q Data (1282).data')
+class Root:
 
-# Extracting relevant DataItems, e.g., waveform data
-data_items = []
-for item in root.findall('.//lv:DataItem', ns):
-    name = item.get('Name')
-    data_type = item.get('DataType')
-    default_value = item.find('lv:p.DefaultValue', ns)
+    def __init__(self, root: ET.Element):
+        assert (root.tag == '{'+ns['pf']+'}SourceFile')
 
-    if name == 'Timestamp' and default_value is not None:
-        timestamp_seconds = int(default_value.text.split(';')[0])
-        timestamp = datetime(1, 1, 1) + timedelta(seconds=timestamp_seconds)
-
-        data_items.append({
-            'Name': name,
-            'DataType': data_type,
-            'Timestamp': timestamp.strftime('%d-%m-%Y %H:%M:%S')
-        })
-
-    # Only process waveform data
-    if name == 'Data' and default_value is not None:
-        interval_hex = default_value.find('.//lv:Interval', ns).text
-        data_hex = default_value.find('.//lv:Elements', ns).text
-
-        if interval_hex:
-            try:
-                # Ensure interval_hex contains only valid hexadecimal digits before unpacking
-                assert (interval_hex[:2] == '0x')
-                time_interval = struct.unpack(
-                    '!d', bytes.fromhex(interval_hex[2:]))[0]
-            except ValueError:
-                print(f"Non-hexadecimal data encountered: '{interval_hex}'")
-                time_interval = np.nan
-
-        # Decode hexadecimal data into float values
-        if data_hex:
-            data_hex = np.array(data_hex.split(','))
-            data_values = np.zeros_like(data_hex, dtype=float)
-            # 16 hex chars represent one double
-            for i, hex_value in enumerate(data_hex):
-                try:
-                    # Ensure hex_value contains only valid hexadecimal digits before unpacking
-                    assert (hex_value[:2] == '0x')
-                    data_value = struct.unpack(
-                        '!d', bytes.fromhex(hex_value[2:]))[0]
-                except ValueError:
-                    if hex_value == '0x0':
-                        data_value = 0.0
-                    else:
-                        print(
-                            f"Non-hexadecimal data encountered: '{hex_value}'")
-                        continue
-                finally:
-                    data_values[i] = data_value
+        reftable = root.find('.//pf:DataTypeReferenceTable', ns)
+        if reftable is not None:
+            self.reftable = RefTable(reftable)
         else:
-            data_values = []
+            self.reftable = None
 
-        # Add to list
-        data_items.append({
-            'Name': name,
-            'DataType': data_type,
-            'Time Interval': time_interval,
-            'DataValues': data_values
-        })
+        self.items = root.findall('.//lv:DataItem', ns)
+        for item in self.items:
+            value = item.find('lv:p.DefaultValue', ns)
+            match item.get('Name'):
+                case 'Data':
+                    self.dataitem = Data(item, reftable=self.reftable)
+                case 'DisplayName':
+                    self.name = value.text
+                case 'Source':
+                    self.source = value.text
+                case 'Timestamp':
+                    self.timestamp = datetime(
+                        1, 1, 1) + timedelta(seconds=int(value.text.split(';')[0]))
 
-# Create DataFrame
-df = pd.DataFrame(data_items)
+    def __str__(self):
+        s = ''
+        if self.reftable is not None:
+            s += str(self.reftable) + '\n'
+        s += f'{self.name} = {self.dataitem}\n'
+        return s
 
-# Optional: Expand data values into separate rows for analysis
-df_expanded = df.explode('DataValues').reset_index(drop=True)
-print(df_expanded)
+    def __repr__(self):
+        return self.__str__()
+
+
+def get_roots(names: list[str], dir_name: str) -> dict[str, Root]:
+    filenames: list[str] = get_filenames(names, dir_name)
+    roots: dict = {}
+    for name, filename in filenames.items():
+        roots[name] = Root(get_root(f'{dir_name}/{filename}'))
+
+    return roots
+
+
+def get_data(roots: dict[str, Root]) -> dict[str, DataType]:
+    data: dict = {}
+    for name, root in roots.items():
+        data[name] = root.dataitem
+
+    return data
+
+
+class Data(DataType):
+
+    datatypes = TypeTable.datatypes
+
+    def __init__(self, item: ET.Element, reftable: RefTable = None):
+        assert (item.tag == '{'+ns['lv']+'}DataItem'
+                and item.get('Name') == 'Data')
+        value = item.find('lv:p.DefaultValue', ns)
+
+        if reftable is not None:
+            self.reftable = reftable
+            self.reftable.typetable.type.__init__(
+                self, value, typetable=self.reftable.typetable)
+
+        else:
+            key = item.get('DataType').replace(',', '')
+            globals()[self.datatypes[key]].__init__(self, value)
+
+
+__all__ = [
+    'get_filenames',
+    'get_root',
+    'Root',
+    'get_roots',
+    'get_data',
+    'Data'
+]

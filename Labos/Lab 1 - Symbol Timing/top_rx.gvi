@@ -79,7 +79,7 @@
             <DataAccessor Bounds="-975 405 40 15" DataItem="280" Id="16" Label="276">
                 <Terminal DataType="Error" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
             </DataAccessor>
-            <CaseStructure Bounds="-915 45 2625 650" DataType="Error" Id="17" Selected="18" UserSelectorBounds="1262.4 0 100.8 16.8">
+            <CaseStructure Bounds="-915 45 2625 650" DataType="Error" Id="17" Selected="18" UserSelectorBounds="1262 0 100 17">
                 <CaseStructure.Case Bounds="5 5 2615 640" Id="18" Pattern="No Error">
                     <FlatSequence Bounds="12 15 2602 600" Id="24">
                         <FlatSequence.Frame Bounds="5 10 200 580" Id="30">
@@ -165,7 +165,7 @@
                                 <TextNode AttachedTo="107" Bounds="313 455 165 16" Id="113" Text="Coerced Carrier Frequency (Hz)" xmlns="http://www.ni.com/PlatformFramework" />
                                 <TextNode AttachedTo="108" Bounds="313 405 96 16" Id="114" Text="Coerced Gain (dB)" xmlns="http://www.ni.com/PlatformFramework" />
                                 <TextNode AttachedTo="109" Bounds="1753 470 25 16" Id="115" Text="Stop" xmlns="http://www.ni.com/PlatformFramework" />
-                                <CaseStructure Bounds="768 50 783 436" Default="156" Id="117" Selected="157" UserSelectorBounds="350.4 0 82.4 16.8">
+                                <CaseStructure Bounds="768 50 783 436" Default="156" Id="117" Selected="157" UserSelectorBounds="350 0 82 17">
                                     <CaseStructure.Case Bounds="5 5 773 426" Id="156" Pattern="False">
                                         <Wire Id="185" Joints="N(161:156) N(165:156)" xmlns="http://www.ni.com/PlatformFramework" />
                                         <Wire Id="735" Joints="N(710:156) h(446) v(5) N(160:156)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -173,7 +173,7 @@
                                         <Wire Id="761" Joints="N(162:156) N(755:156)" xmlns="http://www.ni.com/PlatformFramework" />
                                     </CaseStructure.Case>
                                     <CaseStructure.Case Bounds="5 5 773 426" Id="157" Pattern="True">
-                                        <Literal Bounds="265.4 15 25.6 15.2" DataType="Boolean" Facade="NationalInstruments.MocCommon.Modeling.IBooleanBehavior" Id="186" xmlns="http://www.ni.com/MocCommon">
+                                        <Literal Bounds="265 15 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.Modeling.IBooleanBehavior" Id="186" xmlns="http://www.ni.com/MocCommon">
                                             <p.Data>True</p.Data>
                                             <BooleanBehavior />
                                         </Literal>
@@ -212,7 +212,7 @@
                                                 <PathElement>Power Delay Profile</PathElement>
                                             </p.PropertyItem>
                                         </PropertyNode>
-                                        <Comment Bounds="240 45 227.2 28.8" Id="203" xmlns="http://www.ni.com/MocCommon">
+                                        <Comment Bounds="240 45 227 28" Id="203" xmlns="http://www.ni.com/MocCommon">
                                             <p.Text>Plot I and Q phases of received signal</p.Text>
                                         </Comment>
                                         <TextNode AttachedTo="191" Bounds="460 350 32 16" Id="204" Text="Offset" xmlns="http://www.ni.com/PlatformFramework" />
@@ -337,7 +337,7 @@
                                     <Terminal DataType="Boolean" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
                                 </DataAccessor>
                                 <TextNode AttachedTo="118" Bounds="238 75 86 16" Id="119" Text="Packet Detected" xmlns="http://www.ni.com/PlatformFramework" />
-                                <CaseStructure Bounds="328 215 430 180" Default="168" Id="120" Selected="168" UserSelectorBounds="174.4 0 82.4 16.8">
+                                <CaseStructure Bounds="328 215 430 180" Default="168" Id="120" Selected="168" UserSelectorBounds="174 0 82 17">
                                     <CaseStructure.Case Bounds="5 5 420 170" Id="168" Pattern="False">
                                         <MethodCall Bounds="310 80 50 50" Id="238" Target="MT\ Resample\ \(Complex\ Cluster\)\.gvi">
                                             <p.MethodDeclaration>
@@ -714,11 +714,11 @@
                 <TabItem Header="[string]Received Signal" Id="766">
                     <Canvas Height="[float]444" Id="767" Left="[float]6" Top="[float]27" Width="[float]487" xmlns="http://www.ni.com/PlatformFramework">
                         <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=297}" Height="[float]192" Id="399" Label="[UIModel]407" Left="[float]4" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]27" Width="[float]479" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-                            <Axis Adjuster="[RangeAdjuster]FitExactly" Id="400" Label="[string]Time" MajorDivisions="[UIModel]403" MajorGridLines="[UIModel]813" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 0.0018714999999998425, System.Double" ValueType="[Type]Double">
+                            <Axis Adjuster="[RangeAdjuster]FitExactly" Id="400" Label="[string]Time" MajorDivisions="[UIModel]403" MajorGridLines="[UIModel]813" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 0.0018673750000010576, System.Double" ValueType="[Type]Double">
                                 <RangeLabeledDivisions Id="403" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
                                 <GridLines Id="813" />
                             </Axis>
-                            <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="401" Label="[string]Amplitude" MajorDivisions="[UIModel]811" MajorGridLines="[UIModel]812" Orientation="[SMOrientation]Vertical" Range="[IRange]-1.1, 1.2000000000000002, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double">
+                            <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="401" Label="[string]Amplitude" MajorDivisions="[UIModel]811" MajorGridLines="[UIModel]812" Orientation="[SMOrientation]Vertical" Range="[IRange]-1.1, 1.3, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double">
                                 <RangeLabeledDivisions Id="811" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
                                 <GridLines Id="812" />
                             </Axis>
@@ -729,7 +729,7 @@
                         <GraphTools Graph="[UIModel]399" Id="406" Left="[float]9" Top="[float]226" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
                         <Label Id="407" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]399" Left="[float]4" Locked="[bool]True" Text="[string]I Data" Top="[float]4" Visible="[bool]True" xmlns="http://www.ni.com/LabVIEW.VI" />
                         <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=298}" Height="[float]192" Id="408" Label="[UIModel]416" Left="[float]4" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]248" Width="[float]479" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-                            <Axis Adjuster="[RangeAdjuster]FitExactly" Id="409" Label="[string]Time" MajorDivisions="[UIModel]412" MajorGridLines="[UIModel]816" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 0.0018714999999998425, System.Double" ValueType="[Type]Double">
+                            <Axis Adjuster="[RangeAdjuster]FitExactly" Id="409" Label="[string]Time" MajorDivisions="[UIModel]412" MajorGridLines="[UIModel]816" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 0.0018673750000010576, System.Double" ValueType="[Type]Double">
                                 <RangeLabeledDivisions Id="412" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
                                 <GridLines Id="816" />
                             </Axis>
@@ -2330,7 +2330,7 @@
                             <Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@-1664438422_0" Height="[float]111" Id="2617" Label="[UIModel]2623" Left="[float]378" Top="[float]54" Value="{ClusterBinding FieldName=Control\ Information\&#xA;for\ Packet\ Header/Tail}" Width="[float]161">
                                 <ArrayViewer ArrayElement="[UIModel]2672" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]37" Id="2634" Label="[UIModel]2636" Left="[float]5" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]23" Value="{ClusterBinding FieldName=Training\ Sequence\ (derived)}" Width="[float]131" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
                                     <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
-                                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="2672" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Left="[float]53" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]8" Value="[ComplexDouble]0 + 0i" ValueType="[Type]ComplexDouble" Width="[float]70" />
+                                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="2672" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Left="[float]52" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexDouble]0 + 0i" ValueType="[Type]ComplexDouble" Width="[float]70" />
                                 </ArrayViewer>
                                 <NumericText BaseName="[string]Numeric" Height="[float]22" Id="2635" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]2637" Left="[float]5" Top="[float]79" Value="{ClusterBinding FieldName=Zero\ Pad\ Length}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
                                 <Label Id="2636" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]2634" Left="[float]5" Locked="[bool]True" Text="[string]Training Sequence (derived)" Top="[float]0" />

@@ -35,7 +35,6 @@
         <MethodDocumentation xmlns="http://www.ni.com/PlatformFramework" />
         <DiagramUnplacedItems Id="10" />
         <FrontPanelUnplacedItems Id="11">
-            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="840" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Name="[string]Equalizer length" Value="{DataItemBinding Id=839}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
             <ArrayViewer ArrayElement="[UIModel]901" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Id="904" IsFixedSize="[bool]False" Name="[string]Channel cross correlation" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Value="{DataItemBinding Id=898}" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
                 <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
                 <NumericText BaseName="[string]Numeric" Height="[float]22" Id="901" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Name="[string]Child" ValueFormatter="[string]LV:G6" ValueType="[Type]ComplexDouble" Width="[float]70" />
@@ -51,8 +50,6 @@
             <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]910" Height="[float]102" Id="916" Left="[float]309" Top="[float]1072" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
             <GraphTools Graph="[UIModel]910" Id="917" Left="[float]309" Top="[float]1050" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
             <Label Id="918" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]910" Left="[float]304" Locked="[bool]True" Text="[string]Graph" Top="[float]620" />
-            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="1096" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]1097" Left="[float]82" Top="[float]158" Value="{DataItemBinding Id=1094}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-            <Label Id="1097" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]1096" Left="[float]82" Locked="[bool]True" Text="[string]equalizer delay" Top="[float]135" />
             <ArrayViewer ArrayElement="[UIModel]1176" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Id="1179" Name="[string]Formated channel" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Value="{DataItemBinding Id=1173}" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
                 <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
                 <NumericText BaseName="[string]Numeric" Height="[float]22" Id="1176" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Name="[string]Child" ValueFormatter="[string]LV:G6" ValueType="[Type]ComplexDouble" Width="[float]70" />
@@ -196,6 +193,10 @@
                 <NumericText BaseName="[string]Numeric" Height="[float]22" Id="16" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Left="[float]53" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexDouble]0 + 0i" ValueType="[Type]ComplexDouble" Width="[float]69" />
             </ArrayViewer>
             <Label Id="223" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]19" Left="[float]82" Locked="[bool]True" Text="[string]channel estimate" Top="[float]75" />
+            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="1096" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]1097" Left="[float]226" Top="[float]214" Value="{DataItemBinding Id=1094}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="1097" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]1096" Left="[float]226" Locked="[bool]True" Text="[string]equalizer delay" Top="[float]191" />
+            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="840" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]1214" Left="[float]292" Top="[float]331" Value="{DataItemBinding Id=839}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="1214" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]840" Left="[float]292" Locked="[bool]True" Text="[string]Equalizer length" Top="[float]308" />
         </CPFrontPanel>
         <DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="1" DataType="ComplexDouble[]" Id="17" Name="channel estimate" />
         <DataItem CallDirection="Input" CallIndex="2" DataType="Int32" Id="839" Name="Equalizer length">

@@ -295,30 +295,12 @@
                         <Terminal DataType="@-1808940691_0" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
                     </DataAccessor>
                     <TextNode AttachedTo="515" Bounds="1065 120 135 16" Id="516" Text="Transmitted Constellation" xmlns="http://www.ni.com/PlatformFramework" />
-                    <MethodCall Bounds="440 315 40 40" Id="518" Target="OFDM_modulator\.gviprotected">
-                        <p.MethodDeclaration>
-                            <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
-                                <Parameter Id="L0" Desc="Input Symbols" />
-                                <Parameter Id="L2" Desc="OFDM Parameters In" />
-                                <Parameter Id="L3" Desc="error in (no error)" />
-                                <Parameter Id="R0" Desc="Output Symbols" />
-                                <Parameter Id="R2" Desc="OFDM Parameters out" />
-                                <Parameter Id="R3" Desc="error out" />
-                            </MethodDeclaration>
-                        </p.MethodDeclaration>
-                        <Terminal DataType="ComplexDouble[]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
-                        <Terminal DataType="@-1081220314_0" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
-                        <Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
-                        <Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="40 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                        <Terminal DataType="@-1081220314_0" Direction="Output" Hotspot="40 25" Id="R2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                        <Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                    </MethodCall>
-                    <Wire Id="525" Joints="N(518:R3) N(55:L3)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Wire Id="526" Joints="N(518:R2) h(20) B(1) N(55:L2) B(1) v(-85) N(28:21)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Wire Id="527" Joints="N(518:R0) N(55:L0)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Wire Id="528" Joints="N(49:R3) N(518:L3)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Wire Id="529" Joints="N(27:21) h(383) v(30) N(518:L2)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Wire Id="530" Joints="N(49:R0) h(21) B(1) N(518:L0) B(1) v(-65) B(3) N(35:Value) B(3) v(-105) N(52:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="525" Joints="N(554:R3) N(55:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="526" Joints="N(554:R2) h(15) B(1) N(55:L2) B(1) v(-85) N(28:21)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="527" Joints="N(554:R0) N(55:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="528" Joints="N(49:R3) N(554:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="529" Joints="N(27:21) h(383) v(30) N(554:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="530" Joints="N(49:R0) h(21) B(1) N(554:L0) B(1) v(-65) B(3) N(35:Value) B(3) v(-105) N(52:L2)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="532" Joints="N(539:534) v(-261) h(9.200012) v(-5) N(50:L0)" xmlns="http://www.ni.com/PlatformFramework" />
                     <CaseStructure Bounds="720 590 275 126" DataType="@-45074056_0" Default="536" Id="534" Selected="535" UserSelectorBounds="43.2 0 188.8 16.8">
                         <CaseStructure.Case Bounds="5 5 265 116" Id="535" Pattern="&quot;none&quot;">
@@ -356,6 +338,24 @@
                         <p.Text>"When the pulse shaping is a rectangle, add one element at the beginning \r\nto have the same shift than with other filters (up to a multiple of the oversampling factor).\r\nThis enable to compare the maximum energy curves of the symbol timing block. "</p.Text>
                     </Comment>
                     <Wire Id="553" Joints="N(48:R0) h(7) v(5) h(5) N(538:534)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <MethodCall Bounds="445 315 40 40" Id="554" Target="student_OFDM_modulator\.gvi">
+                        <p.MethodDeclaration>
+                            <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                                <Parameter Id="L0" Desc="Input Symbols" />
+                                <Parameter Id="L2" Desc="OFDM Parameters In" />
+                                <Parameter Id="L3" Desc="error in (no error)" />
+                                <Parameter Id="R0" Desc="Output Symbols" />
+                                <Parameter Id="R2" Desc="OFDM Parameters out" />
+                                <Parameter Id="R3" Desc="error out" />
+                            </MethodDeclaration>
+                        </p.MethodDeclaration>
+                        <Terminal DataType="ComplexDouble[]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                        <Terminal DataType="@-1081220314_0" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+                        <Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+                        <Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="40 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                        <Terminal DataType="@-1081220314_0" Direction="Output" Hotspot="40 25" Id="R2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                        <Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                    </MethodCall>
                 </CaseStructure.Case>
                 <CaseStructure.Case Bounds="5 5 1235 756" Id="22" Pattern="Error">
                     <Wire Id="101" Joints="N(25:22) N(26:22)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -574,7 +574,7 @@
                 <NumericText BaseName="[string]Numeric" Height="[float]22" Id="420" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]424" Left="[float]5" RadixVisibility="[SMVisibility]Collapsed" Top="[float]71" Value="{ClusterBinding FieldName=Noise\ Power\ (dB)}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
                 <ArrayViewer ArrayElement="[UIModel]430" BaseName="[string]Array" Columns="[int]3" Dimensions="[int]1" Height="[float]37" Id="421" Label="[UIModel]425" Left="[float]5" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]119" Value="{ClusterBinding FieldName=Channel\ Response}" Width="[float]272" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
                     <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
-                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="430" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Left="[float]124" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexDouble]0 + 0i" ValueType="[Type]ComplexDouble" Width="[float]69" />
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="430" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Left="[float]195" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexDouble]0.35 + 0.35i" ValueType="[Type]ComplexDouble" Width="[float]69" />
                 </ArrayViewer>
                 <NumericText BaseName="[string]Numeric" Height="[float]22" Id="422" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]426" Left="[float]5" RadixVisibility="[SMVisibility]Collapsed" Top="[float]178" Value="{ClusterBinding FieldName=Frequency\ Offset}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
                 <NumericText BaseName="[string]Numeric" Height="[float]22" Id="423" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]427" Left="[float]110" RadixVisibility="[SMVisibility]Collapsed" Top="[float]178" Value="{ClusterBinding FieldName=Delay\ (sec)}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />

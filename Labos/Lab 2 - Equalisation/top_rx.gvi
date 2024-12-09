@@ -114,9 +114,9 @@
                                         <Parameter Id="R0" Desc="USRP Session out" />
                                     </MethodDeclaration>
                                 </p.MethodDeclaration>
-                                <Terminal DataType="@1744032881_0" Direction="Input" Id="L0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                                <Terminal DataType="@-1389906659_0" Direction="Input" Hotspot="0 25" Id="L2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                                <Terminal DataType="Error" Direction="Input" Hotspot="0 45" Id="L4" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                                <Terminal DataType="@1744032881_0" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                                <Terminal DataType="@-1389906659_0" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+                                <Terminal DataType="Error" Direction="Input" Hotspot="0 45" Id="L4" xmlns="http://www.ni.com/PlatformFramework" />
                                 <Terminal DataType="Error" Direction="Output" Hotspot="50 45" Id="R4" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                                 <Terminal DataType="@1744032881_0" Direction="Output" Hotspot="50 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                                 <Terminal DataType="@-1389906659_0" Direction="Output" Hotspot="50 25" Id="R2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
@@ -238,8 +238,8 @@
                                                     <Parameter Id="R4" Desc="error out" />
                                                 </MethodDeclaration>
                                             </p.MethodDeclaration>
-                                            <Terminal DataType="@1785820191_0" Direction="Input" Id="L0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                                            <Terminal DataType="Error" Direction="Input" Hotspot="0 45" Id="L4" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                                            <Terminal DataType="@1785820191_0" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                                            <Terminal DataType="Error" Direction="Input" Hotspot="0 45" Id="L4" xmlns="http://www.ni.com/PlatformFramework" />
                                             <Terminal DataType="Wfm(Double)" Direction="Output" Hotspot="50 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                                             <Terminal DataType="Wfm(Double)" Direction="Output" Hotspot="50 25" Id="R2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                                             <Terminal DataType="Error" Direction="Output" Hotspot="50 45" Id="R4" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
@@ -269,12 +269,12 @@
                                                     <Parameter Id="B0" Desc="Measured channel impairements" />
                                                 </MethodDeclaration>
                                             </p.MethodDeclaration>
-                                            <Terminal DataType="@1744032881_0" Direction="Input" Id="L0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                                            <Terminal DataType="@-1389906659_0" Direction="Input" Hotspot="0 15" Id="L1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                                            <Terminal DataType="@-829307061_0" Direction="Input" Hotspot="0 25" Id="L2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                                            <Terminal DataType="Error" Direction="Input" Hotspot="0 45" Id="L4" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                                            <Terminal DataType="@1785820191_0" Direction="Input" Hotspot="0 35" Id="L3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                                            <Terminal DataType="@-499706384_0" Direction="Input" Hotspot="15 0" Id="T0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                                            <Terminal DataType="@1744032881_0" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                                            <Terminal DataType="@-1389906659_0" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+                                            <Terminal DataType="@-829307061_0" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+                                            <Terminal DataType="Error" Direction="Input" Hotspot="0 45" Id="L4" xmlns="http://www.ni.com/PlatformFramework" />
+                                            <Terminal DataType="@1785820191_0" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+                                            <Terminal DataType="@-499706384_0" Direction="Input" Hotspot="15 0" Id="T0" xmlns="http://www.ni.com/PlatformFramework" />
                                             <Terminal DataType="Error" Direction="Output" Hotspot="60 45" Id="R4" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                                             <Terminal DataType="@-1389906659_0" Direction="Output" Hotspot="60 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                                             <Terminal DataType="@1744032881_0" Direction="Output" Hotspot="60 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
@@ -388,11 +388,11 @@
                                                     <Parameter Id="R3" Desc="Queues out" />
                                                 </MethodDeclaration>
                                             </p.MethodDeclaration>
-                                            <Terminal DataType="@2072657720_0" Direction="Input" Id="L0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                                            <Terminal DataType="@1744032881_0" Direction="Input" Hotspot="0 15" Id="L1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                                            <Terminal DataType="@-1389906659_0" Direction="Input" Hotspot="0 25" Id="L2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                                            <Terminal DataType="Error" Direction="Input" Hotspot="0 55" Id="L5" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                                            <Terminal DataType="@-829307061_0" Direction="Input" Hotspot="0 35" Id="L3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                                            <Terminal DataType="@2072657720_0" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                                            <Terminal DataType="@1744032881_0" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+                                            <Terminal DataType="@-1389906659_0" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+                                            <Terminal DataType="Error" Direction="Input" Hotspot="0 55" Id="L5" xmlns="http://www.ni.com/PlatformFramework" />
+                                            <Terminal DataType="@-829307061_0" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
                                             <Terminal DataType="Boolean" Direction="Output" Hotspot="45 0" Id="T3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                                             <Terminal DataType="@2072657720_0" Direction="Output" Hotspot="60 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                                             <Terminal DataType="@1744032881_0" Direction="Output" Hotspot="60 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
@@ -524,11 +524,11 @@
                                             <Parameter Id="B2" Desc="Coerced Gain (dB)" />
                                         </MethodDeclaration>
                                     </p.MethodDeclaration>
-                                    <Terminal DataType="@1744032881_0" Direction="Input" Hotspot="0 15" Id="L1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                                    <Terminal DataType="@2072657720_0" Direction="Input" Id="L0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                                    <Terminal DataType="@-829307061_0" Direction="Input" Hotspot="0 35" Id="L3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                                    <Terminal DataType="@-1389906659_0" Direction="Input" Hotspot="0 25" Id="L2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                                    <Terminal DataType="Error" Direction="Input" Hotspot="0 45" Id="L4" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                                    <Terminal DataType="@1744032881_0" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+                                    <Terminal DataType="@2072657720_0" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                                    <Terminal DataType="@-829307061_0" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+                                    <Terminal DataType="@-1389906659_0" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+                                    <Terminal DataType="Error" Direction="Input" Hotspot="0 45" Id="L4" xmlns="http://www.ni.com/PlatformFramework" />
                                     <Terminal DataType="@1744032881_0" Direction="Output" Hotspot="50 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                                     <Terminal DataType="@-1389906659_0" Direction="Output" Hotspot="50 25" Id="R2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                                     <Terminal DataType="Boolean" Direction="Output" Hotspot="35 0" Id="T2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
@@ -603,10 +603,10 @@
                                         <Parameter Id="R4" Desc="error out" />
                                     </MethodDeclaration>
                                 </p.MethodDeclaration>
-                                <Terminal DataType="@1744032881_0" Direction="Input" Hotspot="0 15" Id="L1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                                <Terminal DataType="Error" Direction="Input" Hotspot="0 45" Id="L4" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                                <Terminal DataType="@-829307061_0" Direction="Input" Hotspot="0 25" Id="L2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                                <Terminal DataType="@2072657720_0" Direction="Input" Id="L0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                                <Terminal DataType="@1744032881_0" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+                                <Terminal DataType="Error" Direction="Input" Hotspot="0 45" Id="L4" xmlns="http://www.ni.com/PlatformFramework" />
+                                <Terminal DataType="@-829307061_0" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+                                <Terminal DataType="@2072657720_0" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
                                 <Terminal DataType="Error" Direction="Output" Hotspot="50 45" Id="R4" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                             </MethodCall>
                             <Wire Id="744" Joints="N(739:32) N(736:L2)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -700,7 +700,7 @@
             <Label Id="348" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]347" Left="[float]500" Locked="[bool]True" Text="[string]Coerced Gain (dB)" Top="[float]725" />
             <NumericText BaseName="[string]Numeric" Height="[float]22" Id="377" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]378" Left="[float]1125" Top="[float]790" Value="{DataItemBinding Id=294}" ValueType="[Type]Int32" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
             <Label Id="378" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]377" Left="[float]1125" Locked="[bool]True" Text="[string]Overhead Offset" Top="[float]767" />
-            <ArrayViewer ArrayElement="[UIModel]373" BaseName="[string]Array" Columns="[int]10" Dimensions="[int]1" Height="[float]36" Id="372" Label="[UIModel]374" Left="[float]145" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]805" Value="{DataItemBinding Id=292}" Width="[float]438" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <ArrayViewer ArrayElement="[UIModel]373" BaseName="[string]Array" Columns="[int]10" Dimensions="[int]1" Height="[float]37" Id="372" Label="[UIModel]374" Left="[float]145" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]805" Value="{DataItemBinding Id=292}" Width="[float]438" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
                 <p.DefaultElementValue>0</p.DefaultElementValue>
                 <NumericText BaseName="[string]Numeric" Height="[float]22" Id="373" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Left="[float]91" Name="[string]Child" Top="[float]7" Value="[byte]0" ValueType="[Type]UInt8" Width="[float]36" />
             </ArrayViewer>
@@ -714,11 +714,11 @@
                 <TabItem Header="[string]Received Signal" Id="766">
                     <Canvas Height="[float]444" Id="767" Left="[float]6" Top="[float]27" Width="[float]487" xmlns="http://www.ni.com/PlatformFramework">
                         <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=297}" Height="[float]192" Id="399" Label="[UIModel]407" Left="[float]4" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]27" Width="[float]479" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-                            <Axis Adjuster="[RangeAdjuster]FitExactly" Id="400" Label="[string]Time" MajorDivisions="[UIModel]403" MajorGridLines="[UIModel]813" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 0.00032624999999997256, System.Double" ValueType="[Type]Double">
+                            <Axis Adjuster="[RangeAdjuster]FitExactly" Id="400" Label="[string]Time" MajorDivisions="[UIModel]403" MajorGridLines="[UIModel]813" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 0.0031294999999997367, System.Double" ValueType="[Type]Double">
                                 <RangeLabeledDivisions Id="403" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
                                 <GridLines Id="813" />
                             </Axis>
-                            <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="401" Label="[string]Amplitude" MajorDivisions="[UIModel]811" MajorGridLines="[UIModel]812" Orientation="[SMOrientation]Vertical" Range="[IRange]-0.8, 1.1, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double">
+                            <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="401" Label="[string]Amplitude" MajorDivisions="[UIModel]811" MajorGridLines="[UIModel]812" Orientation="[SMOrientation]Vertical" Range="[IRange]-1.6, 1.5, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double">
                                 <RangeLabeledDivisions Id="811" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
                                 <GridLines Id="812" />
                             </Axis>
@@ -729,11 +729,11 @@
                         <GraphTools Graph="[UIModel]399" Id="406" Left="[float]9" Top="[float]226" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
                         <Label Id="407" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]399" Left="[float]4" Locked="[bool]True" Text="[string]I Data" Top="[float]4" Visible="[bool]True" xmlns="http://www.ni.com/LabVIEW.VI" />
                         <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=298}" Height="[float]192" Id="408" Label="[UIModel]416" Left="[float]4" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]248" Width="[float]479" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-                            <Axis Adjuster="[RangeAdjuster]FitExactly" Id="409" Label="[string]Time" MajorDivisions="[UIModel]412" MajorGridLines="[UIModel]816" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 0.00032624999999997256, System.Double" ValueType="[Type]Double">
+                            <Axis Adjuster="[RangeAdjuster]FitExactly" Id="409" Label="[string]Time" MajorDivisions="[UIModel]412" MajorGridLines="[UIModel]816" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 0.0031294999999997367, System.Double" ValueType="[Type]Double">
                                 <RangeLabeledDivisions Id="412" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
                                 <GridLines Id="816" />
                             </Axis>
-                            <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="410" Label="[string]Amplitude" MajorDivisions="[UIModel]814" MajorGridLines="[UIModel]815" Orientation="[SMOrientation]Vertical" Range="[IRange]-0.8, 0.8, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double">
+                            <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="410" Label="[string]Amplitude" MajorDivisions="[UIModel]814" MajorGridLines="[UIModel]815" Orientation="[SMOrientation]Vertical" Range="[IRange]-1.6, 1.5, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double">
                                 <RangeLabeledDivisions Id="814" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
                                 <GridLines Id="815" />
                             </Axis>
@@ -2328,7 +2328,7 @@
                         <Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@-1389906659_0" Height="[float]485" Id="2615" Label="[UIModel]2633" Left="[float]7" Top="[float]32" Value="{DataItemBinding Id=2614}" Width="[float]553" xmlns="http://www.ni.com/LabVIEW.VI">
                             <StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]22" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="2616" IsReadOnly="[bool]False" Label="[UIModel]2622" Left="[float]5" Text="{ClusterBinding FieldName=Modulation\ Type}" Top="[float]33" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
                             <Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@-1664438422_0" Height="[float]111" Id="2617" Label="[UIModel]2623" Left="[float]378" Top="[float]54" Value="{ClusterBinding FieldName=Control\ Information\&#xA;for\ Packet\ Header/Tail}" Width="[float]161">
-                                <ArrayViewer ArrayElement="[UIModel]2672" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]36" Id="2634" Label="[UIModel]2636" Left="[float]5" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]23" Value="{ClusterBinding FieldName=Training\ Sequence\ (derived)}" Width="[float]130" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                                <ArrayViewer ArrayElement="[UIModel]2672" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]37" Id="2634" Label="[UIModel]2636" Left="[float]5" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]23" Value="{ClusterBinding FieldName=Training\ Sequence\ (derived)}" Width="[float]131" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
                                     <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
                                     <NumericText BaseName="[string]Numeric" Height="[float]22" Id="2672" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Left="[float]53" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]8" Value="[ComplexDouble]0 + 0i" ValueType="[Type]ComplexDouble" Width="[float]70" />
                                 </ArrayViewer>
@@ -2428,7 +2428,7 @@
             <Label Id="633" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]628" Left="[float]85" Locked="[bool]True" Text="[string]Parameters" Top="[float]129" Visible="[bool]False" />
             <Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@-794963958_0" Height="[float]166" Id="635" Label="[UIModel]645" Left="[float]872" Top="[float]676" Value="{DataItemBinding Id=646}" Width="[float]242">
                 <NumericText BaseName="[string]Numeric" Height="[float]22" Id="636" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]640" Left="[float]5" RadixVisibility="[SMVisibility]Collapsed" Top="[float]23" Value="{ClusterBinding FieldName=SNR(dB)}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-                <ArrayViewer ArrayElement="[UIModel]644" BaseName="[string]Array" Columns="[int]3" Dimensions="[int]1" Height="[float]36" Id="637" Label="[UIModel]641" Left="[float]5" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]69" Value="{ClusterBinding FieldName=channel\ estimate}" Width="[float]226" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <ArrayViewer ArrayElement="[UIModel]644" BaseName="[string]Array" Columns="[int]3" Dimensions="[int]1" Height="[float]37" Id="637" Label="[UIModel]641" Left="[float]5" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]69" Value="{ClusterBinding FieldName=channel\ estimate}" Width="[float]227" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
                     <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
                     <NumericText BaseName="[string]Numeric" Height="[float]22" Id="644" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Left="[float]165" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexDouble]0 + 0i" ValueType="[Type]ComplexDouble" Width="[float]54" />
                 </ArrayViewer>

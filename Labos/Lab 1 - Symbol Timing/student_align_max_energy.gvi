@@ -117,7 +117,7 @@
                     <AbsoluteValue Bounds="190 180 30 30" Id="1899" />
                     <Square Bounds="265 180 30 30" Id="1903" />
                     <Wire Id="1905" Joints="N(1899:abs(x\)) N(1903:x)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <ArrayMaxAndMin Bounds="1095 340 40 40" Id="1938" />
+                    <ArrayMaxAndMin Bounds="1095 340 40 40" Id="1938" Label="1976" />
                     <Wire Id="1940" Joints="N(1941:1885) N(1938:array)" xmlns="http://www.ni.com/PlatformFramework" />
                     <ArraySubset Bounds="1270 170 40 40" Id="1948" Terminals="array=1968, subarray=1954, index0=1965, length0" />
                     <Wire Id="1954" Joints="N(1948:subarray) h(5) v(-25) N(1878:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -125,6 +125,7 @@
                     <Wire Id="1965" Joints="N(1938:max index(es\)) h(65) B(1) h(131) v(-140) N(1584:1580) B(1) v(-160) N(1948:index0)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="1968" Joints="N(1876:c0t0v) h(50) B(1) N(1899:x) B(1) v(-20) N(1948:array)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="1973" Joints="N(1903:x^2) h(320) N(1896:1885)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <TextNode AttachedTo="1938" Bounds="1095 322 101 16" Id="1976" IsReadOnly="True" Text="Array Max and Min" xmlns="http://www.ni.com/PlatformFramework" />
                 </CaseStructure.Case>
                 <CaseStructure.Case Bounds="5 5 1455 580" Id="1581" Pattern="Error">
                     <Wire Id="1620" Joints="N(1582:1581) N(1583:1581)" xmlns="http://www.ni.com/PlatformFramework" />

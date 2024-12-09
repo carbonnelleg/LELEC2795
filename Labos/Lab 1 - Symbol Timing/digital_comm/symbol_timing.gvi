@@ -373,26 +373,13 @@
                             <Wire Id="887" Joints="N(320:872) N(321:872)" xmlns="http://www.ni.com/PlatformFramework" />
                         </CaseStructure.Case>
                         <CaseStructure.Case Bounds="5 5 580 170" Id="310" Pattern="&quot;Max Energy&quot;">
+                            <Wire Id="437" Joints="N(1567:R1) h(431) v(10) N(324:310)" xmlns="http://www.ni.com/PlatformFramework" />
                             <Wire Id="439" Joints="N(320:310) N(321:310)" xmlns="http://www.ni.com/PlatformFramework" />
-                            <Wire Id="440" Joints="N(315:310) h(96) B(1) N(1561:L0) B(1) v(50) N(1566:L0)" xmlns="http://www.ni.com/PlatformFramework" />
-                            <MethodCall Bounds="105 20 40 40" Id="1561" Target="align_MaxEnergy\.gviprotected">
-                                <p.MethodDeclaration>
-                                    <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
-                                        <Parameter Id="L1" Desc="Modulation Parameters In" />
-                                        <Parameter Id="L0" Desc="Input Complex Waveform" />
-                                        <Parameter Id="R1" Desc="Modulation Parameters Out" />
-                                        <Parameter Id="R0" Desc="Aligned Complex Waveform" />
-                                        <Parameter Id="R2" Desc="Alignment Offset (Samples)" />
-                                    </MethodDeclaration>
-                                </p.MethodDeclaration>
-                                <Terminal DataType="@-1389906659_0" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
-                                <Terminal DataType="@1785820191_0" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
-                                <Terminal DataType="@-1389906659_0" Direction="Output" Hotspot="40 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                                <Terminal DataType="@1785820191_0" Direction="Output" Hotspot="40 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                                <Terminal DataType="Int32" Direction="Output" Hotspot="40 25" Id="R2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                            </MethodCall>
-                            <Wire Id="1565" Joints="N(323:310) h(5) v(-10) h(76) B(3) N(1561:L1) B(3) v(50) N(1566:L1)" xmlns="http://www.ni.com/PlatformFramework" />
-                            <MethodCall Bounds="110 70 40 40" Id="1566" Target="student_align_max_energy\.gvi">
+                            <Wire Id="440" Joints="N(315:310) N(1567:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+                            <Wire Id="442" Joints="N(1567:R0) N(316:310)" xmlns="http://www.ni.com/PlatformFramework" />
+                            <Wire Id="631" Joints="N(1567:R2) h(431) v(15) N(622:310)" xmlns="http://www.ni.com/PlatformFramework" />
+                            <Wire Id="1565" Joints="N(323:310) h(5) v(-10) N(1567:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+                            <MethodCall Bounds="100 20 40 40" Id="1567" Label="1569" Target="student_align_max_energy\.gvi">
                                 <p.MethodDeclaration>
                                     <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
                                         <Parameter Id="L0" Desc="Input Complex Waveform" />
@@ -412,9 +399,7 @@
                                 <Terminal DataType="Int32" Direction="Output" Hotspot="40 25" Id="R2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                                 <Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                             </MethodCall>
-                            <Wire Id="1583" Joints="N(1566:R1) h(20) v(-50) h(401) v(10) N(324:310)" xmlns="http://www.ni.com/PlatformFramework" />
-                            <Wire Id="1584" Joints="N(1566:R2) h(30) v(-50) h(391) v(15) N(622:310)" xmlns="http://www.ni.com/PlatformFramework" />
-                            <Wire Id="1586" Joints="N(1566:R0) h(10) v(-50) N(316:310)" xmlns="http://www.ni.com/PlatformFramework" />
+                            <TextNode AttachedTo="1567" Bounds="100 2 140 16" Id="1569" IsReadOnly="True" Text="student_align_max_energy" xmlns="http://www.ni.com/PlatformFramework" />
                         </CaseStructure.Case>
                         <CaseStructure.Case Bounds="5 5 580 170" Id="311" Pattern="&quot;Early-Late Gate&quot;">
                             <Wire Id="443" Joints="N(323:311) h(5) v(-10) N(1553:L1)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -528,15 +513,15 @@
                         </CaseStructure.Case>
                         <CaseStructure.Selector Bounds="-4 75 13 15" Docking="Left" Id="314" Terminals="308=478, 309, 872, 310, 311, 312, 313, 827" />
                         <CaseStructure.Tunnel Bounds="-4 25 13 10" Docking="Left" Id="315" Terminals="308=1258, 309=436, 872=877, 310=440, 311=447, 312=455, 313=460, 827=829" />
-                        <CaseStructure.Tunnel Bounds="581 25 13 10" Docking="Right" Id="316" Terminals="308=1273, 309=435, 872=878, 310=1586, 311=448, 312=450, 313=461, 827=831" />
+                        <CaseStructure.Tunnel Bounds="581 25 13 10" Docking="Right" Id="316" Terminals="308=1273, 309=435, 872=878, 310=442, 311=448, 312=450, 313=461, 827=831" />
                         <CaseStructure.Tunnel Bounds="-4 120 13 10" Docking="Left" Id="318" Terminals="308=612, 309=428, 872, 310, 311, 312, 313, 827" />
                         <CaseStructure.Tunnel Bounds="-4 105 13 10" Docking="Left" Id="319" Terminals="308=1252, 309=426, 872, 310, 311, 312, 313, 827" />
                         <CaseStructure.Tunnel Bounds="-4 155 13 10" Docking="Left" Id="320" Terminals="308=469, 309=427, 872=887, 310=439, 311=445, 312=453, 313=458, 827=834" />
                         <CaseStructure.Tunnel Bounds="581 155 13 10" Docking="Right" Id="321" Terminals="308=470, 309=425, 872=887, 310=439, 311=445, 312=452, 313=458, 827=834" />
                         <CaseStructure.Tunnel Bounds="-4 90 13 10" Docking="Left" Id="322" Terminals="308=611, 309, 872, 310, 311, 312, 313=457, 827" />
                         <CaseStructure.Tunnel Bounds="-4 45 13 10" Docking="Left" Id="323" Terminals="308=1264, 309=424, 872=884, 310=1565, 311=443, 312=454, 313=456, 827=1546" />
-                        <CaseStructure.Tunnel Bounds="581 45 13 10" Docking="Right" Id="324" Terminals="308=465, 309=424, 872=884, 310=1583, 311=444, 312=449, 313=456, 827=832" />
-                        <CaseStructure.Tunnel Bounds="581 60 13 10" Docking="Right" Id="622" Terminals="308=474, 309=630, 872=885, 310=1584, 311=641, 312=451, 313=457, 827=833" />
+                        <CaseStructure.Tunnel Bounds="581 45 13 10" Docking="Right" Id="324" Terminals="308=465, 309=424, 872=884, 310=437, 311=444, 312=449, 313=456, 827=832" />
+                        <CaseStructure.Tunnel Bounds="581 60 13 10" Docking="Right" Id="622" Terminals="308=474, 309=630, 872=885, 310=631, 311=641, 312=451, 313=457, 827=833" />
                         <CaseStructure.Tunnel Bounds="-4 60 13 10" Docking="Left" Id="880" Terminals="308=1262, 309, 872=879, 310, 311, 312, 313, 827" />
                     </CaseStructure>
                     <PropertyNode Bounds="15 135 150 105" HasErrorTerminals="False" Id="410" InstanceDataType="@-1389906659_0" Template="List" Terminals="instance in=615~0:5, instance out=1264~150:5, c0t0v=478~150:35, c1t0v=611~150:50, c2t0v=1252~150:65, c3t0v=612~150:80, c4t0v=1271~150:95" VerticalChunkCount="5">
@@ -681,7 +666,7 @@
                 <NumericText BaseName="[string]Numeric" Height="[float]22" Id="131" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]269" Left="[float]5" RadixVisibility="[SMVisibility]Collapsed" Top="[float]65" Value="{ClusterBinding FieldName=dt}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
                 <ArrayViewer ArrayElement="[UIModel]134" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]37" Id="137" Label="[UIModel]270" Left="[float]5" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]107" Value="{ClusterBinding FieldName=Y}" Width="[float]115" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
                     <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
-                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="134" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" ValueType="[Type]ComplexDouble" Width="[float]54" />
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="134" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Left="[float]53" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]31" Value="[ComplexDouble]0 + 0i" ValueType="[Type]ComplexDouble" Width="[float]54" />
                 </ArrayViewer>
                 <Label Id="268" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]128" Left="[float]5" Locked="[bool]True" Text="[string]t0" Top="[float]0" />
                 <Label Id="269" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]131" Left="[float]5" Locked="[bool]True" Text="[string]dt" Top="[float]42" />

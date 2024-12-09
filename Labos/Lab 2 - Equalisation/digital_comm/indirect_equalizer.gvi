@@ -255,13 +255,13 @@
             <TextNode AttachedTo="109" Bounds="122 1050 93 16" Id="281" Text="error in (no error)" xmlns="http://www.ni.com/PlatformFramework" />
             <TextNode AttachedTo="212" Bounds="1790 1050 47 16" Id="285" Text="error out" xmlns="http://www.ni.com/PlatformFramework" />
             <TextNode AttachedTo="106" Bounds="135 1005 80 16" Id="280" Text="equalizer delay" xmlns="http://www.ni.com/PlatformFramework" />
-            <CaseStructure Bounds="435 670 1300 440" DataType="Error" Id="287" Selected="288" UserSelectorBounds="600 0 100 17">
+            <CaseStructure Bounds="435 670 1300 440" DataType="Error" Id="287" Selected="288" UserSelectorBounds="600 0 100.8 16.8">
                 <CaseStructure.Case Bounds="5 5 1290 430" Id="288" Pattern="No Error">
-                    <Literal Bounds="525 290 57 15" DataType="ComplexDouble" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="295" xmlns="http://www.ni.com/MocCommon">
+                    <Literal Bounds="525.2 290 56.8 16" DataType="ComplexDouble" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="295" xmlns="http://www.ni.com/MocCommon">
                         <p.Data>0x0;0x0</p.Data>
                         <NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
                     </Literal>
-                    <Literal Bounds="755 345 57 15" DataType="ComplexDouble" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="296" xmlns="http://www.ni.com/MocCommon">
+                    <Literal Bounds="755.2 345 56.8 16" DataType="ComplexDouble" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="296" xmlns="http://www.ni.com/MocCommon">
                         <p.Data>0x3FF0000000000000;0x0</p.Data>
                         <NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
                     </Literal>
@@ -277,11 +277,11 @@
                     <DataAccessor Bounds="1130 250 40 15" DataItem="120" Id="121" Label="282">
                         <Terminal DataType="ComplexDouble[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
                     </DataAccessor>
-                    <Literal Bounds="260 215 57 15" DataType="ComplexDouble" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="318" xmlns="http://www.ni.com/MocCommon">
+                    <Literal Bounds="260.2 215 56.8 16" DataType="ComplexDouble" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="318" xmlns="http://www.ni.com/MocCommon">
                         <p.Data>0x0;0x0</p.Data>
                         <NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
                     </Literal>
-                    <Literal Bounds="275 145 40 15" DataType="Int32" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="319" xmlns="http://www.ni.com/MocCommon">
+                    <Literal Bounds="275.8 145 39.2 16" DataType="Int32" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="319" xmlns="http://www.ni.com/MocCommon">
                         <p.Data>0</p.Data>
                         <NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
                     </Literal>
@@ -363,28 +363,28 @@
                     </DataAccessor>
                     <TextNode AttachedTo="399" Bounds="126 95 19 16" Id="406" Text="Tab" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="564" Joints="N(329:c0t0v) h(20) B(1) N(321:c1t0v) B(1) v(-80) N(330:x)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Comment Bounds="100 10 275 28" Id="337" xmlns="http://www.ni.com/MocCommon">
+                    <Comment Bounds="100 10 275.2 28.8" Id="337" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>Plot magnitude and phase of channel estimate</p.Text>
                     </Comment>
-                    <Comment Bounds="875 325 87 28" Id="339" xmlns="http://www.ni.com/MocCommon">
+                    <Comment Bounds="875 325 88 28.8" Id="339" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>Delay Matrix</p.Text>
                     </Comment>
-                    <Comment Bounds="595 160 183 28" Id="338" xmlns="http://www.ni.com/MocCommon">
+                    <Comment Bounds="595 160 184 28.8" Id="338" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>Channel Matrix (has full rank)</p.Text>
                     </Comment>
-                    <Comment Bounds="830 135 346 28" Id="342" xmlns="http://www.ni.com/MocCommon">
+                    <Comment Bounds="830 135 345.6 28.8" Id="342" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>Compute MMSE estimate of equalizing filter for given delay</p.Text>
                     </Comment>
-                    <Comment Bounds="660 75 391 28" Id="343" xmlns="http://www.ni.com/MocCommon">
+                    <Comment Bounds="660 75 390.4 28.8" Id="343" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>Make MMSE estimate of equalizing filter based on channel estimate</p.Text>
                     </Comment>
-                    <Comment Bounds="480 365 177 28" Id="340" xmlns="http://www.ni.com/MocCommon">
+                    <Comment Bounds="480 365 176 28.8" Id="340" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>Restrict delay to valid values</p.Text>
                     </Comment>
-                    <Comment Bounds="325 90 156 28" Id="336" xmlns="http://www.ni.com/MocCommon">
+                    <Comment Bounds="325 90 155.2 28.8" Id="336" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>construct channel matrix</p.Text>
                     </Comment>
-                    <Comment Bounds="745 260 144 28" Id="341" xmlns="http://www.ni.com/MocCommon">
+                    <Comment Bounds="745 260 144 28.8" Id="341" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>Construct Delay Matrix</p.Text>
                     </Comment>
                     <Wire Id="736" Joints="N(735:288) N(329:instance in)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -441,7 +441,7 @@
             <Wire Id="1254" Joints="N(1081:Value) h(5) B(1) N(735:287) B(1) v(-35) N(1082:Value)" xmlns="http://www.ni.com/PlatformFramework" />
         </BlockDiagram>
         <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000">
-            <ArrayViewer ArrayElement="[UIModel]16" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]36" Id="19" Label="[UIModel]223" Left="[float]82" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]98" Value="{DataItemBinding Id=17}" Width="[float]129" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <ArrayViewer ArrayElement="[UIModel]16" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]37" Id="19" Label="[UIModel]223" Left="[float]82" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]98" Value="{DataItemBinding Id=17}" Width="[float]129" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
                 <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
                 <NumericText BaseName="[string]Numeric" Height="[float]22" Id="16" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Left="[float]53" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexDouble]0 + 0i" ValueType="[Type]ComplexDouble" Width="[float]69" />
             </ArrayViewer>
@@ -454,7 +454,7 @@
                 <StringControl AcceptsReturn="[bool]True" Height="[float]80" HorizontalScrollBarVisibility="[ScrollBarVisibility]Auto" Id="115" IsReadOnly="[bool]False" Label="[UIModel]116" Left="[float]5" Text="{ClusterBinding FieldName=source}" Top="[float]72" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]120" WordWrap="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
                 <Label Id="116" LabelOwner="[UIModel]115" Left="[float]5" Locked="[bool]True" Text="[string]source" Top="[float]52" />
             </Cluster>
-            <ArrayViewer ArrayElement="[UIModel]119" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]36" Id="122" Label="[UIModel]227" Left="[float]261" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]98" Value="{DataItemBinding Id=120}" Width="[float]114" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <ArrayViewer ArrayElement="[UIModel]119" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]37" Id="122" Label="[UIModel]227" Left="[float]261" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]98" Value="{DataItemBinding Id=120}" Width="[float]115" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
                 <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
                 <NumericText BaseName="[string]Numeric" Height="[float]22" Id="119" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Left="[float]53" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexDouble]0 + 0i" ValueType="[Type]ComplexDouble" Width="[float]54" />
             </ArrayViewer>
@@ -481,10 +481,10 @@
                 <TabItem Header="[string]Magnitude" Id="401">
                     <Canvas Height="[float]473" Id="403" Left="[float]6" Top="[float]27" Width="[float]716" xmlns="http://www.ni.com/PlatformFramework">
                         <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=407}" Height="[float]400" Id="409" Label="[UIModel]417" Left="[float]15" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]42" Width="[float]600" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-                            <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="410" Label="[string]Time" MajorDivisions="[UIModel]413" Orientation="[SMOrientation]Horizontal" Range="[IRange]-1, 1, System.Double" ValueType="[Type]Double">
+                            <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="410" Label="[string]Time" MajorDivisions="[UIModel]413" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 1, System.Double" ValueType="[Type]Double">
                                 <RangeLabeledDivisions Id="413" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
                             </Axis>
-                            <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="411" Label="[string]Amplitude" Orientation="[SMOrientation]Vertical" Range="[IRange]0, 1.1, System.Double" ValueType="[Type]Double" />
+                            <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="411" Label="[string]Amplitude" Orientation="[SMOrientation]Vertical" Range="[IRange]0.5, 1.1, System.Double" ValueType="[Type]Double" />
                             <Plot HorizontalScale="[UIModel]410" Id="412" Label="[string]Plot" VerticalScale="[UIModel]411" />
                         </Graph>
                         <PlotLegend Graph="[UIModel]409" Height="[float]28" Id="414" Left="[float]622" Top="[float]42" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
