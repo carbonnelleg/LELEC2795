@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile xmlns="http://www.ni.com/PlatformFramework">
+    <SourceModelFeatureSet>
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="3.0.0.49154" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="Editor" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/PlatformFramework" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="3.0.0.49152" />
+    </SourceModelFeatureSet>
+    <VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+        <Icon Id="2" ListViewIconCrop="0 0 50 50" xmlns="http://www.ni.com/PlatformFramework">
+            <IconPanel Height="[float]50" Id="3" Width="[float]50">
+                <IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="4" TemplateName="Gray">
+                    <Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" />
+                    <Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" />
+                    <FileNameText FileNameText="[bool]True" Font="[SMFont]0,6," HorizontalAlignment="[HorizontalAlignment]Left" Id="7" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Measured Channel Impairements(31731236-66a3-4e80-97f2-498f24921178)" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" VerticalAlignment="[VerticalAlignment]Top" />
+                </IconTemplate>
+                <Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Id="8" Margin="[SMThickness]3,3,3,3" />
+            </IconPanel>
+        </Icon>
+        <ConnectorPane Height="50" Id="9" ListViewHeight="30" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+            <ConnectorPaneTerminal />
+            <ConnectorPaneTerminal Hotspot="0 15" />
+            <ConnectorPaneTerminal Hotspot="0 25" />
+            <ConnectorPaneTerminal Hotspot="0 35" />
+            <ConnectorPaneTerminal Hotspot="0 45" />
+            <ConnectorPaneTerminal Hotspot="15 0" />
+            <ConnectorPaneTerminal Hotspot="25 0" />
+            <ConnectorPaneTerminal Hotspot="35 0" />
+            <ConnectorPaneTerminal Hotspot="50 5" />
+            <ConnectorPaneTerminal Hotspot="50 15" />
+            <ConnectorPaneTerminal Hotspot="50 25" />
+            <ConnectorPaneTerminal Hotspot="50 35" />
+            <ConnectorPaneTerminal Hotspot="50 45" />
+            <ConnectorPaneTerminal Hotspot="15 50" />
+            <ConnectorPaneTerminal Hotspot="25 50" />
+            <ConnectorPaneTerminal Hotspot="35 50" />
+        </ConnectorPane>
+        <MethodDocumentation xmlns="http://www.ni.com/PlatformFramework" />
+        <DiagramUnplacedItems Id="10">
+            <DataAccessor Bounds="275 170 40 15" DataItem="9749" Id="9750" Label="9751">
+                <Terminal DataType="@-1013147926_0" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="9750" Bounds="320 170 175 16" Id="9751" Text="Measured Channel Impairements" xmlns="http://www.ni.com/PlatformFramework" />
+        </DiagramUnplacedItems>
+        <FrontPanelUnplacedItems Id="11" />
+        <BlockDiagram Id="12" />
+        <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000">
+            <Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@-1013147926_0" Height="[float]172" Id="9738" Label="[UIModel]9748" Left="[float]657" Top="[float]694" Value="{DataItemBinding Id=9749}" Width="[float]246">
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="9739" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]9743" Left="[float]5" RadixVisibility="[SMVisibility]Collapsed" Top="[float]23" Value="{ClusterBinding FieldName=SNR(dB)}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]99" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <ArrayViewer ArrayElement="[UIModel]9747" BaseName="[string]Array" Columns="[int]3" Dimensions="[int]1" Height="[float]37" Id="9740" Label="[UIModel]9744" Left="[float]5" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]72" Value="{ClusterBinding FieldName=Channel\ Estimate}" Width="[float]227" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                    <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="9747" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Left="[float]109" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexDouble]0 + 0i" ValueType="[Type]ComplexDouble" Width="[float]54" />
+                </ArrayViewer>
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="9741" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]9745" Left="[float]5" RadixVisibility="[SMVisibility]Collapsed" Top="[float]132" Value="{ClusterBinding FieldName=Freq.\ Offset}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]92" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="9742" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]9746" Left="[float]136" RadixVisibility="[SMVisibility]Collapsed" Top="[float]132" Value="{ClusterBinding FieldName=Delay}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]95" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <Label Id="9743" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]9739" Left="[float]5" Locked="[bool]True" Text="[string]SNR(dB)" Top="[float]0" />
+                <Label Id="9744" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]9740" Left="[float]5" Locked="[bool]True" Text="[string]Channel Estimate" Top="[float]49" />
+                <Label Id="9745" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]9741" Left="[float]5" Locked="[bool]True" Text="[string]Freq. Offset" Top="[float]109" />
+                <Label Id="9746" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]9742" Left="[float]136" Locked="[bool]True" Text="[string]Delay" Top="[float]109" />
+            </Cluster>
+            <Label Id="9748" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]9738" Left="[float]657" Locked="[bool]True" Text="[string]Measured Channel Impairements" Top="[float]671" />
+        </CPFrontPanel>
+        <DataItem DataType="@-1013147926_0" Id="9734" Name="Data">
+            <p.DefaultValue>
+                <Cluster>
+                    <Field1>0x4025D30D53626EB7</Field1>
+                    <Field2>
+                        <Array Lengths="1">
+                            <Elements>0x3FEAB4905FFFF699;0x3F1BADDDA50145CD</Elements>
+                        </Array>
+                    </Field2>
+                    <Field3>0x0</Field3>
+                    <Field4>0x3EB92A737110E454</Field4>
+                </Cluster>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="String" Id="9735" Name="DisplayName">
+            <p.DefaultValue>Measured Channel Impairements</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="String" Id="9736" Name="Source">
+            <p.DefaultValue>simulator.gvi</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="Timestamp" Id="9737" Name="Timestamp">
+            <p.DefaultValue>63870054262;2175979775609186079;Utc</p.DefaultValue>
+        </DataItem>
+        <DataItem CallIndex="4" DataType="@-1013147926_0" Id="9749" Name="ControlSettings">
+            <p.DefaultValue>
+                <Cluster>
+                    <Field1>0x0</Field1>
+                    <Field2>null</Field2>
+                    <Field3>0x0</Field3>
+                    <Field4>0x0</Field4>
+                </Cluster>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="String" Id="9752" Name="ControlName">
+            <p.DefaultValue>Measured Channel Impairements</p.DefaultValue>
+        </DataItem>
+        <DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+            <p.TypeReference TypeId="-1013147926_0">
+                <Class Id="1" Name="" Cluster="">
+                    <ClosedGenericParameters />
+                    <GenericTypeDefinition>
+                        <Void />
+                    </GenericTypeDefinition>
+                    <BaseType>
+                        <Void />
+                    </BaseType>
+                    <Interfaces />
+                    <Members>
+                        <Field FieldAccessPolicy="ReadWrite" Name="SNR(dB)">
+                            <DataType>
+                                <Double />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Channel Estimate">
+                            <DataType>
+                                <VariableArray>
+                                    <DereferenceType>
+                                        <ComplexDouble />
+                                    </DereferenceType>
+                                </VariableArray>
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Freq. Offset">
+                            <DataType>
+                                <Double />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Delay">
+                            <DataType>
+                                <Double />
+                            </DataType>
+                        </Field>
+                    </Members>
+                </Class>
+            </p.TypeReference>
+        </DataTypeReferenceTable>
+    </VirtualInstrument>
+</SourceFile>

@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile xmlns="http://www.ni.com/PlatformFramework">
+    <SourceModelFeatureSet>
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="3.0.0.49154" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="Editor" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/PlatformFramework" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="3.0.0.49152" />
+    </SourceModelFeatureSet>
+    <VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+        <Icon Id="2" ListViewIconCrop="0 0 50 50" xmlns="http://www.ni.com/PlatformFramework">
+            <IconPanel Height="[float]50" Id="3" Width="[float]50">
+                <IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="4" TemplateName="Gray">
+                    <Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" />
+                    <Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" />
+                    <FileNameText FileNameText="[bool]True" Font="[SMFont]0,6," HorizontalAlignment="[HorizontalAlignment]Left" Id="7" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Power Delay Profile(122dccce-561c-4c33-b66e-d3d36464cc15)" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" VerticalAlignment="[VerticalAlignment]Top" />
+                </IconTemplate>
+                <Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Id="8" Margin="[SMThickness]3,3,3,3" />
+            </IconPanel>
+        </Icon>
+        <ConnectorPane Height="50" Id="9" ListViewHeight="30" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+            <ConnectorPaneTerminal />
+            <ConnectorPaneTerminal Hotspot="0 15" />
+            <ConnectorPaneTerminal Hotspot="0 25" />
+            <ConnectorPaneTerminal Hotspot="0 35" />
+            <ConnectorPaneTerminal Hotspot="0 45" />
+            <ConnectorPaneTerminal Hotspot="15 0" />
+            <ConnectorPaneTerminal Hotspot="25 0" />
+            <ConnectorPaneTerminal Hotspot="35 0" />
+            <ConnectorPaneTerminal Hotspot="50 5" />
+            <ConnectorPaneTerminal Hotspot="50 15" />
+            <ConnectorPaneTerminal Hotspot="50 25" />
+            <ConnectorPaneTerminal Hotspot="50 35" />
+            <ConnectorPaneTerminal Hotspot="50 45" />
+            <ConnectorPaneTerminal Hotspot="15 50" />
+            <ConnectorPaneTerminal Hotspot="25 50" />
+            <ConnectorPaneTerminal Hotspot="35 50" />
+        </ConnectorPane>
+        <MethodDocumentation xmlns="http://www.ni.com/PlatformFramework" />
+        <DiagramUnplacedItems Id="10">
+            <DataAccessor Bounds="1740 185 40 15" DataItem="29330" Id="29331" Label="29332">
+                <Terminal DataType="Wfm(Double)" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="29331" Bounds="1785 185 103 16" Id="29332" Text="Power Delay Profile" xmlns="http://www.ni.com/PlatformFramework" />
+        </DiagramUnplacedItems>
+        <FrontPanelUnplacedItems Id="11" />
+        <BlockDiagram Id="12" />
+        <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000">
+            <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=29330}" Height="[float]400" Id="29220" Label="[UIModel]29329" Left="[float]110" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]673" Width="[float]496" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="29221" Label="[string]Time" MajorDivisions="[UIModel]29323" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 4.9999999999999996E-06, System.Double" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="29323" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
+                </Axis>
+                <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="29222" Label="[string]Amplitude" MajorDivisions="[UIModel]29324" MajorGridLines="[UIModel]29325" Orientation="[SMOrientation]Vertical" Range="[IRange]0, 0.5, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="29324" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
+                    <GridLines Id="29325" />
+                </Axis>
+                <Plot HorizontalScale="[UIModel]29221" Id="29223" Label="[string]Plot" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29224" Label="[string]Plot1" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29225" Label="[string]Plot2" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29226" Label="[string]Plot3" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29227" Label="[string]Plot4" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29228" Label="[string]Plot5" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29229" Label="[string]Plot6" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29230" Label="[string]Plot7" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29231" Label="[string]Plot8" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29232" Label="[string]Plot9" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29233" Label="[string]Plot10" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29234" Label="[string]Plot11" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29235" Label="[string]Plot12" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29236" Label="[string]Plot13" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29237" Label="[string]Plot14" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29238" Label="[string]Plot15" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29239" Label="[string]Plot16" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29240" Label="[string]Plot17" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29241" Label="[string]Plot18" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29242" Label="[string]Plot19" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29243" Label="[string]Plot20" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29244" Label="[string]Plot21" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29245" Label="[string]Plot22" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29246" Label="[string]Plot23" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29247" Label="[string]Plot24" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29248" Label="[string]Plot25" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29249" Label="[string]Plot26" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29250" Label="[string]Plot27" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29251" Label="[string]Plot28" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29252" Label="[string]Plot29" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29253" Label="[string]Plot30" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29254" Label="[string]Plot31" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29255" Label="[string]Plot32" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29256" Label="[string]Plot33" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29257" Label="[string]Plot34" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29258" Label="[string]Plot35" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29259" Label="[string]Plot36" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29260" Label="[string]Plot37" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29261" Label="[string]Plot38" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29262" Label="[string]Plot39" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29263" Label="[string]Plot40" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29264" Label="[string]Plot41" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29265" Label="[string]Plot42" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29266" Label="[string]Plot43" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29267" Label="[string]Plot44" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29268" Label="[string]Plot45" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29269" Label="[string]Plot46" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29270" Label="[string]Plot47" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29271" Label="[string]Plot48" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29272" Label="[string]Plot49" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29273" Label="[string]Plot50" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29274" Label="[string]Plot51" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29275" Label="[string]Plot52" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29276" Label="[string]Plot53" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29277" Label="[string]Plot54" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29278" Label="[string]Plot55" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29279" Label="[string]Plot56" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29280" Label="[string]Plot57" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29281" Label="[string]Plot58" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29282" Label="[string]Plot59" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29283" Label="[string]Plot60" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29284" Label="[string]Plot61" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29285" Label="[string]Plot62" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29286" Label="[string]Plot63" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29287" Label="[string]Plot64" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29288" Label="[string]Plot65" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29289" Label="[string]Plot66" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29290" Label="[string]Plot67" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29291" Label="[string]Plot68" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29292" Label="[string]Plot69" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29293" Label="[string]Plot70" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29294" Label="[string]Plot71" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29295" Label="[string]Plot72" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29296" Label="[string]Plot73" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29297" Label="[string]Plot74" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29298" Label="[string]Plot75" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29299" Label="[string]Plot76" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29300" Label="[string]Plot77" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29301" Label="[string]Plot78" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29302" Label="[string]Plot79" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29303" Label="[string]Plot80" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29304" Label="[string]Plot81" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29305" Label="[string]Plot82" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29306" Label="[string]Plot83" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29307" Label="[string]Plot84" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29308" Label="[string]Plot85" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29309" Label="[string]Plot86" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29310" Label="[string]Plot87" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29311" Label="[string]Plot88" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29312" Label="[string]Plot89" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29313" Label="[string]Plot90" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29314" Label="[string]Plot91" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29315" Label="[string]Plot92" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29316" Label="[string]Plot93" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29317" Label="[string]Plot94" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29318" Label="[string]Plot95" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29319" Label="[string]Plot96" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29320" Label="[string]Plot97" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29321" Label="[string]Plot98" VerticalScale="[UIModel]29222" />
+                <Plot HorizontalScale="[UIModel]29221" Id="29322" Label="[string]Plot99" VerticalScale="[UIModel]29222" />
+            </Graph>
+            <PlotLegend Graph="[UIModel]29220" Height="[float]28" Id="29326" Left="[float]613" Top="[float]673" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]29220" Height="[float]102" Id="29327" Left="[float]115" Top="[float]1102" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]29220" Id="29328" Left="[float]115" Top="[float]1080" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="29329" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]29220" Left="[float]110" Locked="[bool]True" Text="[string]Power Delay Profile" Top="[float]650" Visible="[bool]False" />
+        </CPFrontPanel>
+        <DataItem DataType="Wfm(Double)" Id="29216" Name="Data">
+            <p.DefaultValue>
+                <Waveform>
+                    <Timestamp>60052752000;0;Utc</Timestamp>
+                    <Interval>0x3E90C6F7A0B5EC00</Interval>
+                    <Data>
+                        <Array Lengths="20">
+                            <Elements>0x3FF8830A0EC7D7FB,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0</Elements>
+                        </Array>
+                    </Data>
+                    <Attributes>
+                        <Attribute Name="NI_UnitDescription" DataType="String">""</Attribute>
+                        <Attribute Name="NI_ChannelName" DataType="String">""</Attribute>
+                    </Attributes>
+                </Waveform>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="String" Id="29217" Name="DisplayName">
+            <p.DefaultValue>Power Delay Profile</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="String" Id="29218" Name="Source">
+            <p.DefaultValue>simulator_alpha_loop.gvi</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="Timestamp" Id="29219" Name="Timestamp">
+            <p.DefaultValue>63870057370;18037873835990186775;Utc</p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" DataType="Wfm(Double)" Id="29330" Name="ControlSettings">
+            <p.DefaultValue>
+                <Waveform>
+                    <Timestamp>60052752000;0;Utc</Timestamp>
+                    <Interval>0x3FF0000000000000</Interval>
+                    <Data>
+                        <Array Lengths="0" />
+                    </Data>
+                    <Attributes>
+                        <Attribute Name="NI_UnitDescription" DataType="String">""</Attribute>
+                        <Attribute Name="NI_ChannelName" DataType="String">""</Attribute>
+                    </Attributes>
+                </Waveform>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="String" Id="29333" Name="ControlName">
+            <p.DefaultValue>Power Delay Profile</p.DefaultValue>
+        </DataItem>
+    </VirtualInstrument>
+</SourceFile>
