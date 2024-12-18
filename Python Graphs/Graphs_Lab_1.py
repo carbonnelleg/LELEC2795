@@ -24,6 +24,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib import collections as mplc
 from typing import Any
+from PIL import Image
 
 
 sim_data: dict[str, dict[str, Any]]
@@ -53,12 +54,29 @@ def plot_energy_function(data: dict[str, DataType], ax: plt.Axes) -> mplc.LineCo
     return lc
 
 
+def plot_timing_vs_alpha(data: dict[str, DataType], ax: plt.Axes) -> mplc.LineCollection:
+    t_start = data['alpha values']['First value'].data
+    dt = data['alpha values']['Step'].data
+    t_stop = data['alpha values']['Last value'].data + dt
+    lc = ax.plot(np.arange(t_start, t_stop, dt),
+                 data['Timing statistics'].elements)
+    return lc
+
+
+def plot_timing_vs_oversample_rx(data: dict[str, DataType], ax: plt.Axes) -> mplc.LineCollection:
+    lc = ax.plot(data['Timing vs M']['Element 1'].elements,
+                 data['Timing vs M']['Element 2'].elements)
+    return lc
+
+
 def plot_sync_err_constellation(sim_data: dict[str, dict[str, Any]]) -> None:
 
+    image_paths = []
     for j in range(5):
         fig, ax = plt.subplots()
         for i, delay_ratio in enumerate(np.arange(1.-j*.25, 1.25, 0.25)[::-1]):
-            data: DataType = sim_data[f'3.3 {str(delay_ratio)}']['data']
+            data: dict[str, DataType] = sim_data[f'3.3 {
+                str(delay_ratio)}']['data']
             pc: mplc.PathCollection = plot_constellation(data, ax)
             pc.set_label(f'$\\tau_d = {delay_ratio} * T$')
         ax.legend(loc='center')
@@ -67,14 +85,27 @@ def plot_sync_err_constellation(sim_data: dict[str, dict[str, Any]]) -> None:
         ax.set_xlabel('Constellation I Data')
         ax.set_ylabel('Constellation Q Data')
         fig.suptitle('Received Constellation')
-        plt.savefig(f'Lab_1/3.3 Constellation {j+1}.png', dpi=300)
+        image_path = f'Lab_1/3.3 Constellation {j+1}.png'
+        plt.savefig(image_path, dpi=300)
+        image_paths.append(image_path)
+
+    # Generate GIF
+    images = [Image.open(path) for path in image_paths]
+    gif_path = 'Lab_1/Constellation_Animation.gif'
+    images[0].save(
+        gif_path,
+        save_all=True,
+        append_images=images[1:],
+        duration=500,  # Duration for each frame in milliseconds
+        loop=0  # Loop forever
+    )
 
 
 def plot_sync_err_eye_diagram(sim_data: dict[str, dict[str, Any]]) -> None:
 
     for i, delay_ratio in enumerate(np.arange(5, dtype=float)*.25):
         fig, ax = plt.subplots()
-        data: DataType = sim_data[f'3.3 {str(delay_ratio)}']['data']
+        data: dict[str, DataType] = sim_data[f'3.3 {str(delay_ratio)}']['data']
         lc_list: list[mplc.LineCollection] = plot_eye_diagram(data, ax)
 
         ax.set_xticks(ax.get_xticks(),
@@ -83,7 +114,7 @@ def plot_sync_err_eye_diagram(sim_data: dict[str, dict[str, Any]]) -> None:
                       )
         ax.set_xlabel('Time [$\\mu s$]')
         ax.set_ylabel('|Received Symbol|')
-        T = data["TX Oversample Factor"].data/data["TX Sample Rate"].data*1e6
+        T = data['TX Oversample Factor'].data/data['TX Sample Rate'].data*1e6
         ax.set_title(
             f'$T = {T:.1f}\\mu s\\;\\;\\;\\;\\tau_d = {
                 delay_ratio*T:.2f}\\mu s$'
@@ -97,22 +128,123 @@ def plot_energy_function_all_pulse_filters(sim_data: dict[str, dict[str, Any]]) 
     for filter_type in ['rrc', 'rect', 'rc']:
         fig, ax = plt.subplots()
         if filter_type == 'rect':
-            data_dict = sim_data[f'3.4 {filter_type}']
-            data: DataType = data_dict['data']
+            data_dict: dict[str, Any] = sim_data[f'3.4 {filter_type}']
+            data: dict[str, DataType] = data_dict['data']
             lc: mplc.LineCollection = plot_energy_function(data, ax)
         else:
             lc_list: list[mplc.LineCollection] = []
             for alpha in np.linspace(0., 1., 11):
                 data_dict = sim_data[f'3.4 {filter_type} {alpha:.1f}']
-                data: DataType = data_dict['data']
+                data: dict[str, DataType] = data_dict['data']
                 lc = plot_energy_function(data, ax)
                 lc[0].set_label(f'$\\alpha = \
                     {sim_data[f"3.4 {filter_type} {alpha:.1f}"]["alpha"]}$')
             ax.legend()
         ax.set_ylim([-.05, 1.05])
         ax.set_xticks(np.arange(data['Probe Data'].shape[0]))
+        ax.set_xlabel('k')
+        ax.set_ylabel('$J_{approx}[k]$')
         ax.set_title(data_dict['filter'])
+        fig.suptitle('Energy Function')
         plt.savefig(f'Lab_1/3.4 Energy Function {filter_type}.png', dpi=300)
+
+
+def plot_energy_function_alpha_0(sim_data: dict[str, dict[str, Any]]) -> None:
+
+    fig, ax = plt.subplots()
+    for FL in [16, 32, 64, 128]:
+        data_dict: dict[str, Any] = sim_data[f'Q9 {FL}']
+        data: dict[str, DataType] = data_dict['data']
+        lc = plot_energy_function(data, ax)
+        lc[0].set_label(f'Filter Length = {data_dict["FL"]}')
+    ax.legend()
+    ax.set_xticks(np.arange(data['Probe Data'].shape[0]))
+    ax.set_xlabel('k')
+    ax.set_ylabel('$J_{approx}[k]$')
+    ax.set_title('Root Raised Cosine Pulse $\\;\\;\\;\\;\\alpha = 0$')
+    fig.suptitle('Energy Function')
+    plt.savefig('Lab_1/Q9 Energy Function alpha 0.png', dpi=300)
+
+
+def plot_energy_function_noise(sim_data: dict[str, dict[str, Any]]) -> None:
+    for filter_type in ['rrc', 'rect', 'rc']:
+        fig, ax = plt.subplots()
+        elements: list = []
+        for i in range(5):
+            data_dict: dict[str, Any] = sim_data[f'3.5 {filter_type} {i}']
+            elements.append(data_dict['data']['Probe Data'].elements)
+        elements = np.array(elements)
+        max_factor = elements.max()
+        ax.plot(np.arange(elements.shape[1]),
+                elements.mean(axis=0)/max_factor, color='blue')
+        ax.fill_between(np.arange(elements.shape[1]), elements.min(axis=0)/max_factor,
+                        elements.max(axis=0)/max_factor, color='lightblue')
+        ax.set_xticks(np.arange(elements.shape[1]))
+        ax.set_xlabel('k')
+        ax.set_ylabel('$J_{approx}[k]$')
+        ax.set_title(f'{data_dict["filter"]}''    $|N|_{dB} = -10dB$')
+        fig.suptitle('Energy Function')
+        plt.savefig(f'Lab_1/Energy Function Noise {filter_type}.png')
+
+
+def plot_timing_stats(sim_data: dict[str, dict[str, Any]]) -> None:
+    fig, ax = plt.subplots()
+    ax.set_yscale('log')
+    for filter_type in ['rc', 'rrc', 'rect']:
+        if filter_type == 'rect':
+            for i in list(range(0, 10, 5))[::-1]:
+                data_dict: dict[str, Any] = sim_data[f'3.6 {filter_type} {i}']
+                data: dict[str, DataType] = data_dict['data']
+                lc = plot_timing_vs_alpha(data, ax)
+                lc[0].set_label(
+                    f'{data_dict["filter"]}    ''$|N|_{dB}=$'f'{i}dB')
+        else:
+            for i in list(range(-5, 5, 5))[::-1]:
+                data_dict = sim_data[f'3.6 {filter_type} {i}']
+                data: dict[str, DataType] = data_dict['data']
+                lc = plot_timing_vs_alpha(data, ax)
+                lc[0].set_label(
+                    f'{data_dict["filter"]}    ''$|N|_{dB}=$'f'{i}dB')
+    ax.legend(fontsize='x-small')
+    ax.set_xticks(np.arange(0., 1.1, .1))
+    ax.set_ylim([1e-7, .2])
+    ax.set_xlabel('$\\alpha$')
+    ax.set_ylabel('Mean square timing error $\\epsilon$')
+
+    T: float = data['TX Oversample Factor'].data / \
+        data['TX Sample Rate'].data*1e6
+    tau_d: float = data['TX Channel Model Parameters']['Delay (sec)'].data*1e6
+    ax.set_title(f'$T = {T} \\mu s\\;\\;\\;\\;\\tau_d = {tau_d/T:.2f}T$')
+
+    fig.suptitle('Timing Statistics')
+    plt.savefig('Lab_1/Timing Statistics vs alpha.png')
+
+
+def plot_oversample_rx_stats(sim_data: dict[str, dict[str, Any]]) -> None:
+    fig, ax = plt.subplots()
+    styles = ['-', ':']
+    for i, delay_ratio in enumerate([0.35, 0.375]):
+        data_dict: dict[str, Any] = sim_data[f'3.7 {delay_ratio}']
+        data: dict[str, DataType] = data_dict['data']
+        lc = plot_timing_vs_oversample_rx(data, ax)
+        lc[0].set_linestyle(styles[i])
+
+        T: float = data['TX Oversample Factor'].data / \
+            data['TX Sample Rate'].data*1e6
+        tau_d: float = data['TX Channel Model Parameters']['Delay (sec)'].data*1e6
+        lc[0].set_label(
+            f'$T = {T} \\mu s\\;\\;\\;\\;\\tau_d = {tau_d/T:.3f}T$')
+
+    ax.set_xticks(list(set(np.arange(0, 128, 8)) | set(np.arange(0, 140, 20))))
+    ax.tick_params('x', labelsize='xx-small')
+    ax.set_xlabel('RX Oversample Factor M')
+    ax.set_xlim([0, 120])
+    ax.set_ylabel('Mean square timing error $\\epsilon$')
+    ax.legend()
+    ax.set_yscale('log')
+    ax.set_ylim([1e-7, .05])
+    fig.suptitle('Timing Statiscs')
+    plt.savefig('Lab_1/Timing Statistics vs M.png')
 
 
 def get_simulation_data() -> dict[str, dict[str, Any]]:
@@ -192,33 +324,33 @@ def get_simulation_data() -> dict[str, dict[str, Any]]:
                       'dirname': '2024-12-17 181159 411'},
         '3.5 rrc 4': {'filter': 'Root Raised Cosine Pulse',
                       'dirname': '2024-12-17 181207 987'},
-        '3.5 rect 0': {'filter': 'Rectangle Pulse',
-                       'dirname': '2024-12-17 181313 812'},
-        '3.5 rect 1': {'filter': 'Rectangle Pulse',
-                       'dirname': '2024-12-17 181421 234'},
-        '3.5 rect 2': {'filter': 'Rectangle Pulse',
-                       'dirname': '2024-12-17 181427 418'},
-        '3.5 rect 3': {'filter': 'Rectangle Pulse',
-                       'dirname': '2024-12-17 181432 219'},
-        '3.5 rect 4': {'filter': 'Rectangle Pulse',
-                       'dirname': '2024-12-17 181438 006'},
-        '3.5 rc 0': {'filter': 'Rectangle Pulse',
-                     'dirname': '2024-12-17 181452 421'},
+        '3.5 rc 0': {'filter': 'Raised Cosine Pulse',
+                     'dirname': '2024-12-17 181313 812'},
         '3.5 rc 1': {'filter': 'Raised Cosine Pulse',
-                     'dirname': '2024-12-17 181502 613'},
+                     'dirname': '2024-12-17 181421 234'},
         '3.5 rc 2': {'filter': 'Raised Cosine Pulse',
-                     'dirname': '2024-12-17 181508 104'},
+                     'dirname': '2024-12-17 181427 418'},
         '3.5 rc 3': {'filter': 'Raised Cosine Pulse',
-                     'dirname': '2024-12-17 181515 029'},
+                     'dirname': '2024-12-17 181432 219'},
         '3.5 rc 4': {'filter': 'Raised Cosine Pulse',
-                     'dirname': '2024-12-17 181520 028'},
-        '3.6 rcc -5': {'filter': 'Raised Cosine Pulse', 'Noise Power': -5.0,
+                     'dirname': '2024-12-17 181438 006'},
+        '3.5 rect 0': {'filter': 'Rectangle Pulse',
+                       'dirname': '2024-12-17 181452 421'},
+        '3.5 rect 1': {'filter': 'Rectangle Pulse',
+                       'dirname': '2024-12-17 181502 613'},
+        '3.5 rect 2': {'filter': 'Rectangle Pulse',
+                       'dirname': '2024-12-17 181508 104'},
+        '3.5 rect 3': {'filter': 'Rectangle Pulse',
+                       'dirname': '2024-12-17 181515 029'},
+        '3.5 rect 4': {'filter': 'Rectangle Pulse',
+                       'dirname': '2024-12-17 181520 028'},
+        '3.6 rrc -5': {'filter': 'Root Raised Cosine Pulse', 'Noise Power': 0.0,
                        'dirname': '2024-12-17 182209 863'},
-        '3.6 rcc 0': {'filter': 'Raised Cosine Pulse', 'Noise Power': -5.0,
-                      'dirname': '2024-12-17 182449 943'},
-        '3.6 rc -5': {'filter': 'Cosine Pulse', 'Noise Power': -5.0,
+        '3.6 rrc 0': {'filter': 'Root Raised Cosine Pulse', 'Noise Power': -5.0,
+                      'dirname': '2024-12-18 100936 565'},
+        '3.6 rc -5': {'filter': 'Raised Cosine Pulse', 'Noise Power': -5.0,
                       'dirname': '2024-12-17 182801 761'},
-        '3.6 rc 0': {'filter': 'Cosine Pulse', 'Noise Power': 0.0,
+        '3.6 rc 0': {'filter': 'Raised Cosine Pulse', 'Noise Power': 0.0,
                      'dirname': '2024-12-17 183351 086'},
         '3.6 rect -5': {'filter': 'Rectangle Pulse', 'Noise Power': -5.0,
                         'dirname': '2024-12-17 183445 331'},
@@ -226,7 +358,10 @@ def get_simulation_data() -> dict[str, dict[str, Any]]:
                        'dirname': '2024-12-17 183528 491'},
         '3.6 rect 5': {'filter': 'Rectangle Pulse', 'Noise Power': 5.0,
                        'dirname': '2024-12-17 183610 977'},
-        '3.7': {'dirname': '2024-12-17 184012 047'}
+        '3.7 0.35': {'delay_ratio': 7/20,
+                     'dirname': '2024-12-17 184012 047'},
+        '3.7 0.375': {'delay_ratio': 3/8,
+                      'dirname': '2024-12-18 104740 750'}
     }
 
     return simulation_data_dict
@@ -283,9 +418,13 @@ def main() -> None:
             names, data_dirname + value['dirname'])
         value['data']: dict[str, DataType] = get_data(value['roots'])
 
-    # plot_sync_err_constellation(sim_data)
-    # plot_sync_err_eye_diagram(sim_data)
-    # plot_energy_function_all_pulse_filters(sim_data)
+    plot_sync_err_constellation(sim_data)
+    plot_sync_err_eye_diagram(sim_data)
+    plot_energy_function_all_pulse_filters(sim_data)
+    plot_energy_function_alpha_0(sim_data)
+    plot_energy_function_noise(sim_data)
+    plot_timing_stats(sim_data)
+    plot_oversample_rx_stats(sim_data)
 
 
 if __name__ == '__main__':

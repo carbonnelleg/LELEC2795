@@ -949,10 +949,10 @@ for Packet Header/Tail</PathElement>
                             <PlotRenderer Id="1582" PointFill="[SMSolidColorBrush]#ffa08bb0" PointShape="[PointShape]Rectangle" PointSize="[SMSize]5, 5" />
                             <PlotRenderer Id="1583" PointFill="[SMSolidColorBrush]#ff7f7f7f" PointShape="[PointShape]Diamond" PointSize="[SMSize]5, 5" />
                             <PlotRenderer Id="1584" PointFill="[SMSolidColorBrush]#ff3c0726" PointShape="[PointShape]Cross" PointSize="[SMSize]5, 5" />
-                            <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="1585" Label="[string]Real axis" MajorDivisions="[UIModel]2914" Orientation="[SMOrientation]Horizontal" Range="[IRange]-0.8, 0.8, System.Double" ValueType="[Type]Double">
+                            <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="1585" Label="[string]Real axis" MajorDivisions="[UIModel]2914" Orientation="[SMOrientation]Horizontal" Range="[IRange]-3, 3, System.Double" ValueType="[Type]Double">
                                 <RangeLabeledDivisions Id="2914" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
                             </Axis>
-                            <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="1586" Label="[string]Imaginary axis" Orientation="[SMOrientation]Vertical" Range="[IRange]-0.8, 0.8, System.Double" ValueType="[Type]Double" />
+                            <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="1586" Label="[string]Imaginary axis" Orientation="[SMOrientation]Vertical" Range="[IRange]-3, 3, System.Double" ValueType="[Type]Double" />
                             <Plot HorizontalScale="[UIModel]1585" Id="1587" Label="[string]Plot" VerticalScale="[UIModel]1586" />
                             <Plot HorizontalScale="[UIModel]1585" Id="1588" Label="[string]Plot1" VerticalScale="[UIModel]1586" />
                             <Plot HorizontalScale="[UIModel]1585" Id="1589" Label="[string]Plot2" VerticalScale="[UIModel]1586" />

@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile xmlns="http://www.ni.com/PlatformFramework">
+    <SourceModelFeatureSet>
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="3.0.0.49154" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="Editor" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/PlatformFramework" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="3.0.0.49152" />
+    </SourceModelFeatureSet>
+    <VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+        <Icon Id="2" ListViewIconCrop="0 0 50 50" xmlns="http://www.ni.com/PlatformFramework">
+            <IconPanel Height="[float]50" Id="3" Width="[float]50">
+                <IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="4" TemplateName="Gray">
+                    <Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" />
+                    <Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" />
+                    <FileNameText FileNameText="[bool]True" Font="[SMFont]0,6," HorizontalAlignment="[HorizontalAlignment]Left" Id="7" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Timing vs M(a9983d2d-d6bb-4ecc-8e81-0a833585daf8)" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" VerticalAlignment="[VerticalAlignment]Top" />
+                </IconTemplate>
+                <Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Id="8" Margin="[SMThickness]3,3,3,3" />
+            </IconPanel>
+        </Icon>
+        <ConnectorPane Height="50" Id="9" ListViewHeight="30" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+            <ConnectorPaneTerminal />
+            <ConnectorPaneTerminal Hotspot="0 15" />
+            <ConnectorPaneTerminal Hotspot="0 25" />
+            <ConnectorPaneTerminal Hotspot="0 35" />
+            <ConnectorPaneTerminal Hotspot="0 45" />
+            <ConnectorPaneTerminal Hotspot="15 0" />
+            <ConnectorPaneTerminal Hotspot="25 0" />
+            <ConnectorPaneTerminal Hotspot="35 0" />
+            <ConnectorPaneTerminal Hotspot="50 5" />
+            <ConnectorPaneTerminal Hotspot="50 15" />
+            <ConnectorPaneTerminal Hotspot="50 25" />
+            <ConnectorPaneTerminal Hotspot="50 35" />
+            <ConnectorPaneTerminal Hotspot="50 45" />
+            <ConnectorPaneTerminal Hotspot="15 50" />
+            <ConnectorPaneTerminal Hotspot="25 50" />
+            <ConnectorPaneTerminal Hotspot="35 50" />
+        </ConnectorPane>
+        <MethodDocumentation xmlns="http://www.ni.com/PlatformFramework" />
+        <DiagramUnplacedItems Id="10">
+            <DataAccessor Bounds="1930 295 40 15" DataItem="9946" Id="9947" Label="9948">
+                <Terminal DataType="@-827244755_0" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="9947" Bounds="1975 295 65 16" Id="9948" Text="Timing vs M" xmlns="http://www.ni.com/PlatformFramework" />
+        </DiagramUnplacedItems>
+        <FrontPanelUnplacedItems Id="11" />
+        <BlockDiagram Id="12" />
+        <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000">
+            <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=9946}" Height="[float]400" Id="9934" Label="[UIModel]9945" Left="[float]1122" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]681" Width="[float]600" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="9935" Label="[string]M" MajorDivisions="[UIModel]9938" MajorGridLines="[UIModel]9939" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 120, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="9938" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
+                    <GridLines Id="9939" />
+                </Axis>
+                <Axis Adjuster="[RangeAdjuster]None" Id="9936" Label="[string]Timing Error Statistic" Location="[RelativeLocation]Near" MajorDivisions="[UIModel]9940" MajorGridLines="[UIModel]9941" Orientation="[SMOrientation]Vertical" Range="[IRange]1E-07, 0.05, System.Double" ScaleKind="[RangeScaleKind]LogarithmBase10" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="9940" />
+                    <GridLines Id="9941" />
+                </Axis>
+                <Plot HorizontalScale="[UIModel]9935" Id="9937" Label="[string]Plot" VerticalScale="[UIModel]9936" />
+            </Graph>
+            <PlotLegend Graph="[UIModel]9934" Height="[float]28" Id="9942" Left="[float]1729" Top="[float]681" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]9934" Height="[float]102" Id="9943" Left="[float]1127" Top="[float]1110" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]9934" Id="9944" Left="[float]1127" Top="[float]1088" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="9945" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]9934" Left="[float]1122" Locked="[bool]True" Text="[string]Timing vs M" Top="[float]658" />
+        </CPFrontPanel>
+        <DataItem DataType="@-827244755_0" Id="9930" Name="Data">
+            <p.DefaultValue>
+                <Cluster>
+                    <Field1>
+                        <Array Lengths="60">
+                            <Elements>0x4000000000000000,0x4010000000000000,0x4018000000000000,0x4020000000000000,0x4024000000000000,0x4028000000000000,0x402C000000000000,0x4030000000000000,0x4032000000000000,0x4034000000000000,0x4036000000000000,0x4038000000000000,0x403A000000000000,0x403C000000000000,0x403E000000000000,0x4040000000000000,0x4041000000000000,0x4042000000000000,0x4043000000000000,0x4044000000000000,0x4045000000000000,0x4046000000000000,0x4047000000000000,0x4048000000000000,0x4049000000000000,0x404A000000000000,0x404B000000000000,0x404C000000000000,0x404D000000000000,0x404E000000000000,0x404F000000000000,0x4050000000000000,0x4050800000000000,0x4051000000000000,0x4051800000000000,0x4052000000000000,0x4052800000000000,0x4053000000000000,0x4053800000000000,0x4054000000000000,0x4054800000000000,0x4055000000000000,0x4055800000000000,0x4056000000000000,0x4056800000000000,0x4057000000000000,0x4057800000000000,0x4058000000000000,0x4058800000000000,0x4059000000000000,0x4059800000000000,0x405A000000000000,0x405A800000000000,0x405B000000000000,0x405B800000000000,0x405C000000000000,0x405C800000000000,0x405D000000000000,0x405D800000000000,0x405E000000000000</Elements>
+                        </Array>
+                    </Field1>
+                    <Field2>
+                        <Array Lengths="60">
+                            <Elements>0x3F90000000000002,0x3F8FFFFFFFFFFFFC,0x3F5C71C71C71C71E,0x3922A05F1FFFFFFE,0x3F447AE147AE1494,0x3F5C71C71C71C71E,0x3F34E5E0A72F0544,0x3922A05F1FFFFFFE,0x3F2948B0FCD6EA1C,0x3F447AE147AE146D,0x3F20ECF56BE69CA7,0x0,0x3F183C977AB2BEB2,0x3F34E5E0A72F0544,0x3F123456789ABC8E,0x3922A05F1FFFFFFE,0x3F0C5894D10D49E0,0x3F2948B0FCD6E9C7,0x3F06B1490AA319DC,0x3922A05F1FFFFFFE,0x3F0293725BB8047D,0x3F20ECF56BE69CA7,0x3EFEF8BDB389EBA9,0x0,0x3EFA36E2EB1C431B,0x3F183C977AB2BEED,0x3EF67980E0BF08D7,0x0,0x3EF37B4824872798,0x3F123456789ABC8E,0x3EF10C8531D094CA,0x3922A05F1FFFFFFE,0x3EEE1709A36116C0,0x3F0C5894D10D4927,0x3EEABFD7E03C2F48,0x3922A05F1FFFFFFE,0x3EE7EF8B5038D9B6,0x3F06B1490AA319DC,0x3EE58B31509EE1F9,0x3922A05F1FFFFFFE,0x3EE37E3FA847E1C5,0x3F0293725BB804C6,0x3EE1B8D5C5929F77,0x0,0x3EE02E85C0898B29,0x3EFEF8BDB389EBA9,0x3EDDAAEFE42FBF40,0x0,0x3EDB4B985CF97EC2,0x3EFA36E2EB1C431B,0x3ED9324B647D9750,0x0,0x3ED754AA3DCA3A97,0x3EF67980E0BF08D7,0x3ED5AA2FE645E710,0x0,0x3ED42BCF25E6514C,0x3EF37B48248726C0,0x3ED2D3A774906E78,0x3922A05F1FFFFFFE</Elements>
+                        </Array>
+                    </Field2>
+                </Cluster>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="String" Id="9931" Name="DisplayName">
+            <p.DefaultValue>Timing vs M</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="String" Id="9932" Name="Source">
+            <p.DefaultValue>simulator_oversample_loop.gvi</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="Timestamp" Id="9933" Name="Timestamp">
+            <p.DefaultValue>63870115660;13843691131508659782;Utc</p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" DataType="@-827244755_0" Id="9946" Name="ControlSettings">
+            <p.DefaultValue>
+                <Cluster>
+                    <Field1>null</Field1>
+                    <Field2>null</Field2>
+                </Cluster>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="String" Id="9949" Name="ControlName">
+            <p.DefaultValue>Timing vs M</p.DefaultValue>
+        </DataItem>
+        <DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+            <p.TypeReference TypeId="-827244755_0">
+                <Class Id="1" Name="" Cluster="">
+                    <ClosedGenericParameters />
+                    <GenericTypeDefinition>
+                        <Void />
+                    </GenericTypeDefinition>
+                    <BaseType>
+                        <Void />
+                    </BaseType>
+                    <Interfaces />
+                    <Members>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Element 1">
+                            <DataType>
+                                <VariableArray>
+                                    <DereferenceType>
+                                        <Double />
+                                    </DereferenceType>
+                                </VariableArray>
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Element 2">
+                            <DataType>
+                                <VariableArray>
+                                    <DereferenceType>
+                                        <Double />
+                                    </DereferenceType>
+                                </VariableArray>
+                            </DataType>
+                        </Field>
+                    </Members>
+                </Class>
+            </p.TypeReference>
+        </DataTypeReferenceTable>
+    </VirtualInstrument>
+</SourceFile>
